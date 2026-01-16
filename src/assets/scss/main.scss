@@ -168,7 +168,7 @@ body {
   .wrap-titulo {
     text-align: left;
     margin-bottom: 40px;
-    width: 50%;
+    width: 38%;
     margin-left: 0;
     margin-right: auto;
 
@@ -183,7 +183,6 @@ body {
       font-size: rem(18); 
       line-height: 1.5; 
       margin-bottom: 30px; 
-      max-width: 400px;
     }
   }
 
@@ -199,6 +198,125 @@ body {
 // Mobile
 @media (max-width: 600px) {
   #soluciones .grid { grid-template-columns: 1fr; }
+}
+
+// Variables
+$bg-yellow: #f5e3a1;
+$card-white: #fdfaf2;
+$text-main: #333333;
+$text-muted: #666666;
+
+#testimonios {
+  background-color: #F4DF97;
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+  
+  // Imagen de fondo (la cara de la derecha en la imagen original)
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0; right: 0;
+    width: 35%;
+    height: 100%;
+    background: url('../img/home/fondo-testimonios.jpg') no-repeat right center;
+    background-size: cover;
+    z-index: 1;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+    flex-wrap: wrap;
+  }
+
+  .intro {
+    max-width: 500px;
+    margin-bottom: 50px;
+
+    h2 {
+      font-size: rem(40);
+      color: #462B0D;
+      font-family: $ff-secondary;
+      font-weight: 400;
+      margin-bottom: 20px;
+    }
+
+    p {
+      line-height: 1.6;
+      color: $text-main;
+      font-size: rem(18);
+      font-weight: 400;
+    }
+  }
+
+  .grid {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .testimonio-card {
+    background-color: $card-white;
+    padding: 40px;
+    border-radius: 20px;
+    flex: 1;
+    min-width: 300px;
+    max-width: 520px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease;
+    
+    // Sustitución de darken() usando color-mix() estándar de CSS
+    &:hover {
+      background-color: color-mix(in srgb, $card-white, black 2%);
+    }
+
+    blockquote {
+      font-size: rem(24);
+      font-weight: 400;
+      line-height: 1.5;
+      color: $text-main;
+      margin: 0 0 30px 0;
+      font-style: normal;
+    }
+
+    .autor {
+      cite {
+        display: block;
+        font-style: normal;
+        font-size: rem(22);
+        font-weight: 400;
+        color: $text-muted;
+        margin-bottom: 15px;
+
+        strong {
+          color: #000;
+          font-weight: 700;
+        }
+      }
+
+      .logo-cliente {
+        height: 25px;
+        width: auto;
+        object-fit: contain;
+        display: block;
+      }
+    }
+  }
+}
+
+// Mobile
+@media (max-width: 992px) {
+  #testimonios::after {
+    display: none; // Quitamos la imagen decorativa en tablets/móviles
+  }
+  
+  #testimonios .testimonio-card {
+    max-width: 100%;
+  }
 }
 
 /*About Section*/

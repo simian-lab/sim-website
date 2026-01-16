@@ -13,27 +13,27 @@ soluciones:
   - imagen: "/assets/img/home/soluciones-1.jpg"
     titulo: "Estrategia de producto / Consultoría"
     descripcion: "Descripción corta, introducción o extracto sobre el proyecto."
-    url: "#"
+    url: "https://simian.co/"
   - imagen: "/assets/img/home/soluciones-2.jpg"
     titulo: "Automatización con IA"
     descripcion: "Descripción corta, introducción o extracto sobre el proyecto."
-    url: "#"
+    url: "https://simian.co/"
   - imagen: "/assets/img/home/soluciones-3.jpg"
     titulo: "UX/UI centrado en el usuario"
     descripcion: "Descripción corta, introducción o extracto sobre el proyecto."
-    url: "#"
+    url: "https://simian.co/"
   - imagen: "/assets/img/home/soluciones-4.jpg"
     titulo: "Desarrollo web y móvil"
     descripcion: "Descripción corta, introducción o extracto sobre el proyecto."
-    url: "#"
+    url: "https://simian.co/"
   - imagen: "/assets/img/home/soluciones-5.jpg"
     titulo: "Infraestructura y DevOps"
     descripcion: "Descripción corta, introducción o extracto sobre el proyecto."
-    url: "#"
+    url: "https://simian.co/"
   - imagen: "/assets/img/home/soluciones-6.jpg"
     titulo: "Soporte y mejora continua"
     descripcion: "Descripción corta, introducción o extracto sobre el proyecto."
-    url: "#"
+    url: "https://simian.co/"
 ---
 <section id="hero-simian">
   <div class="container">
@@ -58,7 +58,6 @@ soluciones:
 </section>
 
 <section id="soluciones">
-
   <div class="container">
     <div class="wrap-titulo">
       <h2>Soluciones de Simian</h2>
@@ -69,6 +68,37 @@ soluciones:
       {% for solucion in soluciones %}
         {% include "molecules/card-solucion.njk" %}
       {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="testimonios">
+  <div class="container">
+    <div class="intro">
+      <h2>¿Qué dicen de nosotros?</h2>
+      <p>Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore</p>
+    </div>
+
+    <div class="grid">
+      <article class="testimonio-card">
+        <blockquote>
+          “Simian ha sido un aliado muy versátil para el desarrollo de diferentes proyectos digitales. Nos han venido acompañando desde hace varios años y se han destacado por su compromiso, conocimiento técnico, entendimiento de los (...)”
+        </blockquote>
+        <div class="autor">
+          <cite><strong>Diego Vallejo</strong>, Chief Digital Officer</cite>
+          <img src="/assets/img/home/cliente-el-tiempo.png" alt="El Tiempo" class="logo-cliente">
+        </div>
+      </article>
+
+      <article class="testimonio-card">
+        <blockquote>
+          “Más de 7 años junto a Simian nos han dado soporte confiable, conocimiento experto y un aliado estratégico que consolidó nuestras herramientas digitales. Son verdaderamente nuestras manos extendidas.”
+        </blockquote>
+        <div class="autor">
+          <cite><strong>Luis Puerto</strong>, Director de Transformación Digital</cite>
+          <img src="/assets/img/home/cliente-universidad-externado-colombia.png" alt="Universidad Externado" class="logo-cliente">
+        </div>
+      </article>
     </div>
   </div>
 </section>

@@ -39,7 +39,7 @@
         max-width: 100%;
         max-height: 100%;
         box-sizing: border-box;
-        background: rgba(11, 120, 93, .8);
+        background: rgba(11, 120, 93, .7);
         color: #ffffff;
         padding: 18px;
         display: flex;
@@ -50,9 +50,16 @@
         transition: opacity 0.4s ease;
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
+
+        .wrap-content {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
       
       h3 { color: $white; padding: 0; margin-bottom: 20px; }
-      p { font-size: 0.9rem; line-height: 1.6; margin-bottom: 25px; }
+      p { font-size: rem(20); line-height: 1.6; margin-bottom: 25px; }
       
       .btn {
         align-self: flex-start;

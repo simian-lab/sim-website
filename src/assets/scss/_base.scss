@@ -1,6 +1,9 @@
+@use "functions" as *;
 @use "variables" as *;
 @use "organisms/header";
 @use "organisms/footer";
+
+
 
 img, iframe {
     max-width: 100%;
@@ -20,11 +23,12 @@ html {
 
 body {
     font-family: $ff-primary;
-    font-size: 16px;
+    font-size: rem(16);
     line-height: 1.4;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: #1B1918;
 }
 
 .container {

@@ -1,0 +1,48 @@
+@use "_functions" as *;
+@use "_variables" as *;
+@use "_base";
+@use "sass:color";
+
+.card-portafolio {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    width: 50%;
+    max-width: 48%;
+    text-align: left;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    .image-box {
+      width: 100%;
+      height: 440px;
+      overflow: hidden;
+      
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .info {
+      padding: 25px;
+
+      h3 {
+        color: $green-dark;
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+        line-height: 1.3;
+      }
+
+      p {
+        color: $text-gray;
+        font-size: 1.1rem;
+        line-height: 1.5;
+      }
+    }
+  }

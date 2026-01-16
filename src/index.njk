@@ -1,0 +1,88 @@
+---
+layout: layouts/base.njk
+title: "Simian: Desarrollo web, WordPress y automatizaciones con IA"
+bodyClass: "home"
+proyectos:
+  - imagen: "/assets/img/home/home-pwa-portafolio.jpg"
+    titulo: "PWA Universidad Externado de Colombia"
+    descripcion: "Descripción corta, introducción o extracto sobre el proyecto."
+  - imagen: "/assets/img/home/web-90-minutos.jpg"
+    titulo: "Rediseño Sitio Web del noticiero 90 minutos"
+    descripcion: "Descripción corta, introducción o extracto sobre el proyecto."
+soluciones:
+  - imagen: "/assets/img/home/soluciones-1.jpg"
+    titulo: "Estrategia de producto / Consultoría"
+    descripcion: "Descripción corta, introducción o extracto sobre el proyecto."
+    url: "#"
+  - imagen: "/assets/img/home/soluciones-2.jpg"
+    titulo: "Automatización con IA"
+    descripcion: "Descripción corta, introducción o extracto sobre el proyecto."
+    url: "#"
+  - imagen: "/assets/img/home/soluciones-3.jpg"
+    titulo: "UX/UI centrado en el usuario"
+    descripcion: "Descripción corta, introducción o extracto sobre el proyecto."
+    url: "#"
+  - imagen: "/assets/img/home/soluciones-4.jpg"
+    titulo: "Desarrollo web y móvil"
+    descripcion: "Descripción corta, introducción o extracto sobre el proyecto."
+    url: "#"
+  - imagen: "/assets/img/home/soluciones-5.jpg"
+    titulo: "Infraestructura y DevOps"
+    descripcion: "Descripción corta, introducción o extracto sobre el proyecto."
+    url: "#"
+  - imagen: "/assets/img/home/soluciones-6.jpg"
+    titulo: "Soporte y mejora continua"
+    descripcion: "Descripción corta, introducción o extracto sobre el proyecto."
+    url: "#"
+---
+<section id="hero-simian">
+  <div class="container">
+    <div class="col-6 text-box">
+      <h1>Technology <br> <span>for human beings</span></h1>
+      <p>En Simian diseñamos y construimos sitios Web, PWAs, Apps y automatizaciones con IA que conectan marcas con personas.</p>
+      <a href="#" class="btn">Agenda una reunión</a>
+    </div>
+    <div class="col-6 wrap-image">
+        <img src="/assets/img/home/hero-dispositivos.png" alt="Desarrollo apps y sitios web" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section id="portfolio">
+  <div class="container">
+    {% for proyecto in proyectos %}
+      {% include "molecules/card-portafolio.njk" %}
+    {% endfor %}
+  </div>
+  <a href="#" class="btn-more">Todos los proyectos</a>
+</section>
+
+<section id="soluciones">
+
+  <div class="container">
+    <div class="wrap-titulo">
+      <h2>Soluciones de Simian</h2>
+      <p>Diseñamos, automatizamos y escalamos productos digitales de principio a fin.</p>
+    </div>
+
+    <div class="grid">
+      {% for solucion in soluciones %}
+        {% include "molecules/card-solucion.njk" %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="about-section">
+  <div class="container">
+    <div class="info">
+      <h2>Conoce sobre nosotros</h2>
+      <p>En Simian nos importa el bienestar de la manada que hace posible llegar al éxito.</p>
+      <a href="#" class="btn-primary">¿Quiénes somos?</a>
+    </div>
+
+    <div class="visual">
+      <img src="assets/img/home/home-nosotros.png" alt="Equipo Simian" loading="lazy">
+    </div>
+  </div>
+</section>

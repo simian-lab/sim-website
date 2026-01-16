@@ -1,4 +1,5 @@
 @use "../variables" as *;
+@use "../functions" as *;
 
 #main-footer {
   background-color: $footer-bg;
@@ -44,7 +45,7 @@
       h4 {
         text-transform: uppercase;
         color: $yellow-accent;
-        font-size: 16px;
+        font-size: rem(16);
         font-weight: 600;
         letter-spacing: 1px;
         margin-bottom: 1rem;
@@ -82,7 +83,7 @@
     .logo img { height: 58px; }
 
     .legal {
-      font-size: 16px;
+      font-size: rem(16);
       a, span { 
         margin-right: 0; transition: all 0.4s ease; 
 

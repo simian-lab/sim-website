@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    {# Aquí capturamos la descripción del Front Matter #}
+    <meta name="description" content="{{ description or 'Soluciones en WordPress, PWAs y automatizaciones con IA. UX/UI, Core Web Vitals y alta disponibilidad para marcas que necesitan escalar.' }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/assets/img/favicon-simian.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body class="{{ bodyClass or 'home' }}">
+    {% include "partials/header.njk" %}
+
+    <main>{{ content | safe }}</main>
+
+    {% include "partials/footer.njk" %}
+</body>
+</html>

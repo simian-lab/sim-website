@@ -10,8 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="/assets/fonts/icofont/icofont.min.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/{{ css }}.css">
     <link rel="icon" type="image/png" href="/assets/img/favicon-simian.png">
+    <script src="/assets/js/general.js"></script>
 </head>
 <body class="{{ bodyClass or 'home' }}">
     {% include "partials/header.njk" %}

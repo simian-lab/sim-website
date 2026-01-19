@@ -14,7 +14,11 @@ header {
         background-color: rgb(15 87 69 / 70%);
         box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(5px);
-    }    
+    }
+
+    body:not(.home) & {
+        background-color: $bg-cream;
+    }
 
     .container { 
         justify-content: space-between;
@@ -51,8 +55,14 @@ header {
                 font-size: rem(24);
                 font-weight: 500;
                 transition: color 0.3s ease;
+
                 &:hover {
                     color: $banana-suave;
+                }
+
+                // Cuando el body NO es .home
+                body:not(.home) & {
+                    color: $cafe-oscuro;
                 }
             }
         }

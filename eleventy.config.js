@@ -12,6 +12,11 @@ export default async function(eleventyConfig) {
             }
         }
     });
+
+    // --- CONFIGURACIÓN DE VIGILANCIA (WATCH) ---
+    // Forzar a Eleventy a vigilar cambios en la carpeta JS
+    eleventyConfig.addWatchTarget("src/assets/js/");
+
     // Configuración para compilar Sass
     eleventyConfig.addTemplateFormats("scss");
 
@@ -38,11 +43,16 @@ export default async function(eleventyConfig) {
         }
     });
 
+    /*Copiar Js*/
+    eleventyConfig.addPassthroughCopy("src/assets/js");
+
     // Copiar imágenes
     eleventyConfig.addPassthroughCopy("src/assets/img");
+
     // Copiar fuentes (Solución a tu problema)
     // Esto copiará src/assets/fonts/ a _site/assets/fonts/
-    eleventyConfig.addPassthroughCopy("src/assets/fonts");
+    eleventyConfig.addPassthroughCopy("src/assets/fonts");    
+
     return {
         dir: {
             input: "src",

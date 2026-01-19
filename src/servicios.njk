@@ -1,0 +1,61 @@
+---
+layout: layouts/base.njk
+css: servicios
+title: "Servicios | Simian: Desarrollo web, WordPress y automatizaciones con IA"
+description: "Soluciones en WordPress, PWAs y automatizaciones con IA. UX/UI, Core Web Vitals y alta disponibilidad para marcas que necesitan escalar."
+bodyClass: "servicios"
+servicios:
+  - numero: 1
+    titulo: "Estrategia de producto"
+    descripcion: "Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure"
+    imagen: "/assets/img/servicios/servicio-1.jpg"
+    url: "/diseno-centrado-en-el-usuario"
+  - numero: 2
+    titulo: "Diseño centrado en el usuario"
+    descripcion: "Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure"
+    imagen: "/assets/img/servicios/servicio-2.jpg"
+    url: "/diseno-centrado-en-el-usuario"
+  - numero: 3
+    titulo: "Desarrollo e implementación"
+    descripcion: "Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure"
+    imagen: "/assets/img/servicios/servicio-3.jpg"
+    url: "/diseno-centrado-en-el-usuario"
+  - numero: 4
+    titulo: "Soporte"
+    descripcion: "Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure"
+    imagen: "/assets/img/servicios/servicio-4.jpg"
+    url: "/diseno-centrado-en-el-usuario"
+---
+<section id="servicios-hero">
+  <div class="container">
+    <div class="col-6 servicios-content">
+      <h1>Desde la planeación hasta el mantenimiento</h1>
+      <p>Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum.</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="servicios-cards">
+  <div class="container">
+    <div class="servicios-grid">
+      {% for servicio in servicios %}
+        <article class="servicio-card" style="background-image: url('{{ servicio.imagen }}');">          
+          <div class="servicio-body">
+            <span class="servicio-numero">{{ servicio.numero }}</span>
+            <div class="wrap-content">
+                <div class="text-content">
+                    <h3>{{ servicio.titulo }}</h3>
+                    <p>{{ servicio.descripcion }}</p>
+                </div>
+                <a href="{{ servicio.url }}" class="servicio-link">
+                    <span>Conocer más</span>
+                    <i class="icofont-thin-right"></i>
+                </a>
+            </div>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

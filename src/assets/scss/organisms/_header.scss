@@ -101,15 +101,28 @@ header {
                 text-decoration: none;
                 font-size: rem(24);
                 font-weight: 600;
-                transition: color 0.3s ease;
+                padding: 4px 13px;
+                transition: all 0.3s ease;
+                border: 1px solid transparent;
+                border-radius: 70px;
 
                 &:hover {
                     color: $banana-suave;
+                    border-color: $cafe-oscuro;
+                }
+
+                &.current {
+                    border-color: $white;
                 }
 
                 // Cuando el body NO es .home
                 body:not(.home):not(.conocenos):not(.detalle-proyecto) & {
                     color: $cafe-oscuro;
+
+                    &.current {
+                        border-color: $cafe-oscuro;
+                    }
+                    
                 }
 
                 @media (max-width: 992px) {
@@ -119,6 +132,8 @@ header {
                 @media (max-width: 600px) {
                     font-size: rem(18);
                     color: $cafe-oscuro !important;
+                    border: none !important;
+                    border-radius: 0 !important;
 
                     &:hover {
                         color: $primary-color !important;

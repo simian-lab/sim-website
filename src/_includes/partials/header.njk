@@ -16,10 +16,17 @@
         
         <div class="nav-wrap">
             <nav>
-                <a href="/portafolio/">Portafolio</a>
-                <a href="/servicios/">Servicios</a>
-                <a href="/conocenos/">Conócenos</a>
-                <a href="/contacto/">Contacto</a>
+                <a href="/portafolio/" 
+                   class="{% if page.url == '/portafolio/' %}current{% endif %}">Portafolio</a>
+                
+                <a href="/servicios/" 
+                   class="{% if page.url == '/servicios/' %}current{% endif %}">Servicios</a>
+                
+                <a href="/conocenos/" 
+                   class="{% if page.url == '/conocenos/' %}current{% endif %}">Conócenos</a>
+                
+                <a href="/contacto/" 
+                   class="{% if page.url == '/contacto/' %}current{% endif %}">Contacto</a>
             </nav>
             <!-- <div class="lang">
                 <a href="?lang=es" class="active">Español</a>

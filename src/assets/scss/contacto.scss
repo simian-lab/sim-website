@@ -213,11 +213,18 @@
 
     .container {
       gap: rem(40);
+      flex-wrap: wrap;
+
+      .col-6 {
+        padding-top: rem(50);
+        width: 100%;
+
+      }
     }
 
     .contacto-info {
       h1 {
-        font-size: rem(40);
+        font-size: rem(32);
       }
 
       p {
@@ -231,6 +238,10 @@
           font-size: rem(20);
         }
       }
+    }
+
+    .contacto-form {
+      padding-top: 0 !important;
     }
   }
 }

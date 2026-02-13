@@ -81,49 +81,36 @@
 
   @media (max-width: 992px) {
     background-size: 42% 100%;
-    padding: rem(100) 0 rem(60);
+    height: auto;
+    min-height: auto;
 
     .servicio-content {
       max-width: 100%;
       margin-left: auto;
+      width: 50%;
 
       h1 {
-        font-size: rem(40);
-      }
-      > p {
-        font-size: rem(17);
-      }
-    }
-  }
-
-  @media (max-width: 768px) {
-    background-size: 50% 55%;
-    background-position: left top;
-    padding: rem(80) 0 rem(50);
-
-    .hero-wrapper {
-      justify-content: center;
-    }
-
-    .servicio-content {
-      margin-left: 0;
-      padding-top: rem(320);
-      text-align: center;
-
-      h1 {
-        font-size: rem(38);
+        font-size: rem(32);
       }
       > p {
         font-size: rem(16);
+      }
+
+      .servicio-features {
+        gap: rem(5);
+        li {
+          font-size: rem(16);
+        }
       }
     }
   }
 
   @media (max-width: 600px) {
     background-image: none;
-    padding: rem(60) 0 rem(40);
+    padding-bottom: rem(50);
 
     .servicio-content {
+      width: 100%;
       padding-top: 0;
       text-align: center;
 
@@ -132,6 +119,11 @@
       }
       > p {
         font-size: rem(16);
+      }
+
+      .servicio-features {
+        display: inline-block;
+        text-align: left;
       }
     }
   }
@@ -196,7 +188,7 @@
   }
 
   @media (max-width: 992px) {
-    padding: rem(60) 0;
+    padding: rem(50) 0 rem(180);
 
     .hitos-wrapper {
       grid-template-columns: 1fr;
@@ -215,7 +207,7 @@
   }
 
   @media (max-width: 600px) {
-    padding: rem(40) 0;
+    padding: rem(40) 0 rem(180);
 
     h2 {
       font-size: rem(28);
@@ -311,23 +303,25 @@
 
       h2 {
         font-size: rem(36);
+        margin-top: rem(-160);
       }
     }
 
     .otros-servicios-grid {
       grid-template-columns: repeat(2, 1fr);
       gap: rem(30);
-      padding: rem(40) rem(20) rem(60);
+      padding-bottom: 0;
     }
   }
 
   @media (max-width: 600px) {
     .container {
-      padding-bottom: rem(30);
+      padding-bottom: rem(0);
       padding-top: rem(30);
 
       h2 {
         font-size: rem(28);
+        margin-top: rem(-160);
       }
     }
 

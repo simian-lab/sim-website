@@ -69,6 +69,14 @@ header {
             span:nth-child(3) {
                 transform: translateY(-9px) rotate(-45deg);
             }
+        }        
+
+        body.home &,
+        body.conocenos &,
+        body.detalle-proyecto & {
+            span {
+                background-color: $white;
+            }
         }
 
         @media (max-width: 600px) {
@@ -110,6 +118,11 @@ header {
 
                 @media (max-width: 600px) {
                     font-size: rem(18);
+                    color: $cafe-oscuro !important;
+
+                    &:hover {
+                        color: $primary-color !important;
+                    }
                 }
             }
 

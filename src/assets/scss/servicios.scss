@@ -44,48 +44,29 @@
     }
 
     @media (max-width: 992px) {
-        background-size: 42% 100%;
-        padding: rem(80) 0;
+      background-size: 40% 100%;
+      background-position: left center;
+      height: auto;
+      min-height: auto;
+      padding: rem(150) 0 rem(220);
 
-        .servicios-content {
-            h1 {
-                font-size: rem(42);
-            }
-            > p {
-                max-width: 100%;
-                font-size: rem(17);
-            }
+      .servicios-content {
+        margin-left: 0;
+        text-align: center;
+        max-width: 100%;
+
+        h1 {
+            font-size: rem(32);
         }
-    }
-
-    @media (max-width: 768px) {
-        background-size: 50% 55%;
-        background-position: left top;
-        height: auto;
-        min-height: auto;
-        padding: rem(60) 0;
-
-        .container {
-            justify-content: center;
+        > p {
+            font-size: rem(16);
         }
-
-        .servicios-content {
-            margin-left: 0;
-            text-align: center;
-            max-width: 100%;
-
-            h1 {
-                font-size: rem(38);
-            }
-            > p {
-                font-size: rem(16);
-            }
-        }
+      }
     }
 
     @media (max-width: 600px) {
-        background-image: none;
-        padding: rem(48) 0;
+      background-image: none;
+      padding-bottom: rem(180);
 
         .servicios-content {
             text-align: center;
@@ -202,10 +183,15 @@
 
   @media (max-width: 992px) {
     padding: rem(60) 0;
+    
+
+    .servicios-grid {
+      padding: 0;
+    }
 
     .servicio-card {
       background-size: 40% 100%;
-      padding: rem(40) rem(40) rem(40) rem(80);
+      padding: rem(15) rem(40);
       gap: rem(30);
       min-height: rem(250);
 
@@ -216,6 +202,18 @@
 
       .servicio-body {
         max-width: 55%;
+
+        .text-content {
+          padding-right: 0;
+        }
+
+        h3 {
+          font-size: rem(24);
+        }
+
+        p {
+          font-size: rem(16);
+        }
       }
     }
   }
@@ -228,12 +226,12 @@
     }
 
     .servicio-card {
-      background-size: 100% 40%;
+      background-size: 100% 50%;
       background-position: center bottom;
       grid-template-columns: 1fr;
-      padding: rem(30) rem(30) rem(200) rem(60);
+      padding: rem(20) rem(20) rem(270) rem(20);
       gap: rem(20);
-      min-height: rem(300);
+      min-height: auto;
 
       .servicio-numero {
         font-size: rem(80);

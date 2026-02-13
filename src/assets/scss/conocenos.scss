@@ -74,7 +74,7 @@ body {
   }
 
   @media (max-width: 992px) {
-    padding: rem(60) 0;
+    padding: rem(80) 0 rem(40);
 
     .container {
       flex-direction: column;
@@ -83,10 +83,9 @@ body {
 
     .col-5 {
       width: 100%;
-      max-width: rem(300);
 
       img {
-        max-width: rem(300);
+        max-width: rem(150);
       }
     }
 
@@ -108,14 +107,14 @@ body {
   }
 
   @media (max-width: 600px) {
-    padding: rem(40) 0;
+    padding: rem(100) 0 rem(60);
     min-height: auto;
 
     .col-5 {
       max-width: rem(250);
 
       img {
-        max-width: rem(250);
+        max-width: rem(120);
         border-width: rem(6);
       }
     }
@@ -252,7 +251,6 @@ body {
     .habilidades-wrapper {
       .wrap-top,
       .wrap-bottom {
-        flex-direction: column;
         gap: rem(40);
         margin-bottom: rem(50);
       }
@@ -280,6 +278,15 @@ body {
       .wrap-bottom {
         gap: rem(30);
         margin-bottom: rem(40);
+      }
+
+      .wrap-top, .wrap-bottom {
+        flex-wrap: wrap;
+        
+        .col-4 {
+          width: 50%;
+          flex: 50%
+        }
       }
 
       h2 {
@@ -395,7 +402,7 @@ body {
   }
 
   @media (max-width: 992px) {
-    padding: rem(60) 0;
+    padding-bottom: rem(340);
 
     .container {
       flex-direction: column;
@@ -425,7 +432,8 @@ body {
   }
 
   @media (max-width: 600px) {
-    padding: rem(40) 0;
+
+    padding-bottom: rem(100);
 
     .container {
       gap: rem(40);
@@ -559,6 +567,10 @@ body {
 
     .gallery-row {
       gap: rem(12);
+
+      &.gallery-row-1 {
+        margin-top: rem(-100);
+      }
 
       img {
         border-radius: rem(8);

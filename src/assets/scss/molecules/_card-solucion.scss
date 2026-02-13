@@ -77,4 +77,8 @@
     &:hover .back, &.active .back {
       opacity: 1;
     }
-  }
+
+    @media (max-width: 992px) {
+      height: rem(330);
+    }
+}

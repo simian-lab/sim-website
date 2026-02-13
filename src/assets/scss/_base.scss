@@ -100,3 +100,12 @@ body {
     width: 100%;
     float: left;
 }
+
+[class^="col-"], [class*=" col-"] {
+    box-sizing: border-box;
+
+    @media (max-width: 600px) {
+        float: none;
+        width: 100%;
+    }
+}

@@ -45,4 +45,16 @@
         line-height: 1.5;
       }
     }
+
+    @media (max-width: 992px) {
+
+      .image-box {
+        height: rem(200);
+      }
+    }
+
+    @media (max-width: 600px) {
+      width: 100%;
+      max-width: 100%;
+    }
   }

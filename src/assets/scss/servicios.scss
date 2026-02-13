@@ -9,62 +9,95 @@
     position: relative;
     overflow: hidden;
     background-image: url(/assets/img/servicios/lateral-servicios-hero.jpg);
-    background-size: 30% 100%;
+    background-size: 36% 100%;
     background-repeat: no-repeat;
-    background-position: right center;
-    height: 70vh;   
+    background-position: left center;
+    height: 70vh;
+    min-height: rem(400);
 
-
-  .servicios-content {
-    padding-top: rem(145);
-    h1 {
-      color: $primary-color;
-      font-family: $ff-secondary;
-      font-size: rem(56);
-      font-weight: 400;
-      line-height: 1.1;
-      margin-bottom: rem(24);
+    .container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 100%;
     }
-
-    > p {
-      color: #1B1918;
-      font-family: $ff-primary;
-      font-size: rem(18);
-      line-height: 1.6;
-      max-width: rem(600);
-    }
-  }
-
-  @media (max-width: 992px) {
-    .servicios-content {
-      h1 {
-        font-size: rem(42);
-      }
-
-      > p {
-        max-width: 100%;
-      }
-    }
-
-    .servicios-image {
-      min-height: rem(400);
-      order: -1;
-    }
-  }
-
-  @media (max-width: 600px) {
-    padding: rem(60) 0;
 
     .servicios-content {
-      h1 {
-        font-size: rem(36);
-      }
+        max-width: rem(600);
+        margin-left: auto;
 
-      > p {
-        font-size: rem(16);
-      }
+        h1 {
+            color: $primary-color;
+            font-family: $ff-secondary;
+            font-size: rem(52);
+            font-weight: 400;
+            line-height: 1.1;
+            margin-bottom: rem(24);
+        }
+
+        > p {
+            color: #1B1918;
+            font-family: $ff-primary;
+            font-size: rem(18);
+            line-height: 1.6;
+        }
     }
-  }
+
+    @media (max-width: 992px) {
+        background-size: 42% 100%;
+        padding: rem(80) 0;
+
+        .servicios-content {
+            h1 {
+                font-size: rem(42);
+            }
+            > p {
+                max-width: 100%;
+                font-size: rem(17);
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        background-size: 50% 55%;
+        background-position: left top;
+        height: auto;
+        min-height: auto;
+        padding: rem(60) 0;
+
+        .container {
+            justify-content: center;
+        }
+
+        .servicios-content {
+            margin-left: 0;
+            text-align: center;
+            max-width: 100%;
+
+            h1 {
+                font-size: rem(38);
+            }
+            > p {
+                font-size: rem(16);
+            }
+        }
+    }
+
+    @media (max-width: 600px) {
+        background-image: none;
+        padding: rem(48) 0;
+
+        .servicios-content {
+            text-align: center;
+
+            h1 {
+                font-size: rem(36);
+            }
+            > p {
+                font-size: rem(16);
+            }
+        }
+    }
 }
 
 #servicios-cards {
@@ -84,25 +117,25 @@
 
   .servicio-card {
     background-color: $white;
-    background-size: 35% 100%;
+    background-size: 37% 100%;
     background-repeat: no-repeat;
     background-position: right center;
     border: none;
-    border-radius: rem(10);
-    padding: rem(50) rem(50) rem(50) rem(50);
+    border-radius: rem(15);
+    padding: rem(40) rem(50) rem(40) rem(50);
     display: grid;
     grid-template-columns: auto 1fr;
     gap: rem(40);
     align-items: center;
     position: relative;
     overflow: visible;
-    min-height: rem(280);
+    min-height: rem(250);
 
     .servicio-numero {
       color: #9E9894;
       font-family: $ff-primary;
-      font-size: rem(140);
-      font-weight: 700;
+      font-size: rem(147);
+      font-weight: 900;
       line-height: 1;
       z-index: 2;
       pointer-events: none;
@@ -123,16 +156,17 @@
       h3 {
         color: $primary-color;
         font-family: $ff-primary;
-        font-size: rem(28);
+        font-size: rem(30);
         font-weight: 600;
         line-height: 1.3;
         margin: 0;
+        margin-bottom: rem(6);
       }
 
       p {
         color: #1B1918;
         font-family: $ff-primary;
-        font-size: rem(16);
+        font-size: rem(18);
         line-height: 1.6;
         margin: 0;
       }
@@ -143,7 +177,7 @@
         gap: rem(12);
         color: #462B0D;
         font-family: $ff-primary;
-        font-size: rem(16);
+        font-size: rem(18);
         font-weight: 600;
         text-decoration: none;
         margin-top: rem(8);

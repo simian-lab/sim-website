@@ -1,0 +1,110 @@
+---
+layout: layouts/base.njk
+css: portafolio
+title: "Portafolio | Simian: Desarrollo web, WordPress y automatizaciones con IA"
+description: "Soluciones en WordPress, PWAs y automatizaciones con IA. UX/UI, Core Web Vitals y alta disponibilidad para marcas que necesitan escalar."
+bodyClass: "portafolio"
+proyectos:
+  - titulo: "Rediseño Sitio Web del noticiero 90 minutos"
+    descripcion: "PWA Universidad Externado de Colombia"
+    imagen: "/assets/img/portafolio/noticiero-90-minutos.jpg"
+    texto: "Descripción corta, introducción o extracto sobre el proyecto."
+    url: "/detalle-proyecto/"
+  - titulo: "Rediseño Sitio Web del noticiero 90 minutos"
+    descripcion: "PWA Universidad Externado de Colombia"
+    imagen: "/assets/img/portafolio/noticiero-90-minutos.jpg"
+    texto: "Descripción corta, introducción o extracto sobre el proyecto."
+    url: "/detalle-proyecto/"
+  - titulo: "Rediseño Sitio Web del noticiero 90 minutos"
+    descripcion: "PWA Universidad Externado de Colombia"
+    imagen: "/assets/img/portafolio/noticiero-90-minutos.jpg"
+    texto: "Descripción corta, introducción o extracto sobre el proyecto."
+    url: "/detalle-proyecto/"
+otrosProyectos:
+  - titulo: "PWA Universidad Externado de Colombia"
+    texto: "Descripción general de 40 a 60 palabras aproximadamente a cerca del proyecto. El texto debe mencionar la industria del cliente y explicar de forma puntual qué se desarrolló. Ej: Para el banco Davivienda se creó un portal de afiliados exclusivo para los empleados que se jubilaron con la compañía. En el portal se comparten eventos e información de interés para los pensionados, etc... ."
+    imagen: "/assets/img/portafolio/image.jpg"
+    url: "/detalle-proyecto/"
+  - titulo: "PWA Universidad Externado de Colombia"
+    texto: "Descripción general de 40 a 60 palabras aproximadamente a cerca del proyecto. El texto debe mencionar la industria del cliente y explicar de forma puntual qué se desarrolló. Ej: Para el banco Davivienda se creó un portal de afiliados exclusivo para los empleados que se jubilaron con la compañía. En el portal se comparten eventos e información de interés para los pensionados, etc... ."
+    imagen: "/assets/img/portafolio/image.jpg"
+    url: "/detalle-proyecto/"
+  - titulo: "PWA Universidad Externado de Colombia"
+    texto: "Descripción general de 40 a 60 palabras aproximadamente a cerca del proyecto. El texto debe mencionar la industria del cliente y explicar de forma puntual qué se desarrolló. Ej: Para el banco Davivienda se creó un portal de afiliados exclusivo para los empleados que se jubilaron con la compañía. En el portal se comparten eventos e información de interés para los pensionados, etc... ."
+    imagen: "/assets/img/portafolio/image.jpg"
+    url: "/detalle-proyecto/"
+  - titulo: "PWA Universidad Externado de Colombia"
+    texto: "Descripción general de 40 a 60 palabras aproximadamente a cerca del proyecto. El texto debe mencionar la industria del cliente y explicar de forma puntual qué se desarrolló. Ej: Para el banco Davivienda se creó un portal de afiliados exclusivo para los empleados que se jubilaron con la compañía. En el portal se comparten eventos e información de interés para los pensionados, etc... ."
+    imagen: "/assets/img/portafolio/image.jpg"
+    url: "/detalle-proyecto/"
+  - titulo: "PWA Universidad Externado de Colombia"
+    texto: "Descripción general de 40 a 60 palabras aproximadamente a cerca del proyecto. El texto debe mencionar la industria del cliente y explicar de forma puntual qué se desarrolló. Ej: Para el banco Davivienda se creó un portal de afiliados exclusivo para los empleados que se jubilaron con la compañía. En el portal se comparten eventos e información de interés para los pensionados, etc... ."
+    imagen: "/assets/img/portafolio/image.jpg"
+    url: "/detalle-proyecto/"
+  - titulo: "PWA Universidad Externado de Colombia"
+    texto: "Descripción general de 40 a 60 palabras aproximadamente a cerca del proyecto. El texto debe mencionar la industria del cliente y explicar de forma puntual qué se desarrolló. Ej: Para el banco Davivienda se creó un portal de afiliados exclusivo para los empleados que se jubilaron con la compañía. En el portal se comparten eventos e información de interés para los pensionados, etc... ."
+    imagen: "/assets/img/portafolio/image.jpg"
+    url: "/detalle-proyecto/"
+  - titulo: "PWA Universidad Externado de Colombia"
+    texto: "Descripción general de 40 a 60 palabras aproximadamente a cerca del proyecto. El texto debe mencionar la industria del cliente y explicar de forma puntual qué se desarrolló. Ej: Para el banco Davivienda se creó un portal de afiliados exclusivo para los empleados que se jubilaron con la compañía. En el portal se comparten eventos e información de interés para los pensionados, etc... ."
+    imagen: "/assets/img/portafolio/image.jpg"
+    url: "/detalle-proyecto/"
+  - titulo: "PWA Universidad Externado de Colombia"
+    texto: "Descripción general de 40 a 60 palabras aproximadamente a cerca del proyecto. El texto debe mencionar la industria del cliente y explicar de forma puntual qué se desarrolló. Ej: Para el banco Davivienda se creó un portal de afiliados exclusivo para los empleados que se jubilaron con la compañía. En el portal se comparten eventos e información de interés para los pensionados, etc... ."
+    imagen: "/assets/img/portafolio/image.jpg"
+    url: "/detalle-proyecto/"
+  - titulo: "PWA Universidad Externado de Colombia"
+    texto: "Descripción general de 40 a 60 palabras aproximadamente a cerca del proyecto. El texto debe mencionar la industria del cliente y explicar de forma puntual qué se desarrolló. Ej: Para el banco Davivienda se creó un portal de afiliados exclusivo para los empleados que se jubilaron con la compañía. En el portal se comparten eventos e información de interés para los pensionados, etc... ."
+    imagen: "/assets/img/portafolio/image.jpg"
+    url: "/detalle-proyecto/"
+---
+<section id="portafolio-hero">
+    <div class="container">
+      <div class="col-7 servicios-content">
+        <h1>El trabajo que habla por nosotros</h1>
+        <p>Creamos portales digitales, PWAs y aplicaciones móviles centradas en el humano. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum. </p>
+      </div>
+    </div>
+</section>
+
+<section id="portafolio-destacados">
+    <div class="container">
+        <div class="wrap-portafolio-destacados">
+            {% for proyecto in proyectos %}
+                <div class="item-destacado">
+                    <div class="col-7 wrap-img">
+                        <img src="{{ proyecto.imagen }}" alt="Portafolio Destacado 1">
+                    </div>
+                    <div class="col-5 wrap-contenido">
+                        <h4>{{ proyecto.titulo }}</h4>
+                        <h2>{{ proyecto.descripcion }}</h2>
+                        <p>{{ proyecto.texto }}</p>
+                        <a href="{{ proyecto.url }}" class="btn-ver-proyecto">Conocer más <i class="icofont-thin-right"></i></a>
+                    </div>
+                </div>
+            {% endfor %}
+
+        </div>
+    </div>
+</section>
+
+<!-- <section id="otros-proyectos">
+    <div class="container">
+        <h2>Otros proyectos destacados</h2>        
+        <div class="wrap-otros-proyectos">
+            {% for otro in otrosProyectos %}
+                <div class="item-otro-proyecto">
+                    <div class="col-12 wrap-img">
+                        <img src="{{ otro.imagen }}" alt="Portafolio Destacado 1">
+                    </div>
+                    <div class="col-12 wrap-contenido">
+                        <a href="{{ otro.url }}" class="btn-ver-proyecto">
+                            <h4>{{ otro.titulo }}</h4>
+                        </a>
+                        <p>{{ otro.texto }}</p>
+                    </div>
+                </div>
+            {% endfor %}            
+        </div>
+    </div>
+</section> -->

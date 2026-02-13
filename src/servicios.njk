@@ -6,24 +6,34 @@ description: "Soluciones en WordPress, PWAs y automatizaciones con IA. UX/UI, Co
 bodyClass: "servicios"
 servicios:
   - numero: 1
-    titulo: "Estrategia de producto"
+    titulo: "Estrategia de producto / Consultoría"
     descripcion: "Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure"
-    imagen: "/assets/img/servicios/servicio-1.jpg"
+    imagen: "/assets/img/servicios/servicio-1.png"
     url: "/diseno-centrado-en-el-usuario"
   - numero: 2
-    titulo: "Diseño centrado en el usuario"
+    titulo: "Automatización con IA"
     descripcion: "Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure"
-    imagen: "/assets/img/servicios/servicio-2.jpg"
+    imagen: "/assets/img/servicios/servicio-2.png"
     url: "/diseno-centrado-en-el-usuario"
   - numero: 3
-    titulo: "Desarrollo e implementación"
+    titulo: "UX/UI centrado en el usuario"
     descripcion: "Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure"
-    imagen: "/assets/img/servicios/servicio-3.jpg"
+    imagen: "/assets/img/servicios/servicio-3.png"
     url: "/diseno-centrado-en-el-usuario"
   - numero: 4
-    titulo: "Soporte"
+    titulo: "Desarrollo web y móvil"
     descripcion: "Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure"
-    imagen: "/assets/img/servicios/servicio-4.jpg"
+    imagen: "/assets/img/servicios/servicio-4.png"
+    url: "/diseno-centrado-en-el-usuario"
+  - numero: 4
+    titulo: "Infraestructura, seguridad y DevOps"
+    descripcion: "Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure"
+    imagen: "/assets/img/servicios/servicio-5.png"
+    url: "/diseno-centrado-en-el-usuario"
+  - numero: 4
+    titulo: "Soporte y mejora continua"
+    descripcion: "Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure"
+    imagen: "/assets/img/servicios/servicio-6.png"
     url: "/diseno-centrado-en-el-usuario"
 ---
 <section id="servicios-hero">
@@ -41,7 +51,6 @@ servicios:
       {% for servicio in servicios %}
         <article class="servicio-card" style="background-image: url('{{ servicio.imagen }}');">          
           <div class="servicio-body">
-            <span class="servicio-numero">{{ servicio.numero }}</span>
             <div class="wrap-content">
                 <div class="text-content">
                     <h3>{{ servicio.titulo }}</h3>

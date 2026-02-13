@@ -113,16 +113,17 @@
     flex-direction: column;
     gap: rem(40);
     margin-top: rem(-150);
+    padding: 0 rem(70);
   }
 
   .servicio-card {
     background-color: $white;
-    background-size: 37% 100%;
+    background-size: 47% 100%;
     background-repeat: no-repeat;
     background-position: right center;
     border: none;
     border-radius: rem(15);
-    padding: rem(40) rem(50) rem(40) rem(50);
+    padding: rem(42) rem(50);
     display: grid;
     grid-template-columns: auto 1fr;
     gap: rem(40);
@@ -131,23 +132,12 @@
     overflow: visible;
     min-height: rem(250);
 
-    .servicio-numero {
-      color: #9E9894;
-      font-family: $ff-primary;
-      font-size: rem(147);
-      font-weight: 900;
-      line-height: 1;
-      z-index: 2;
-      pointer-events: none;
-      margin-right: rem(40);
-    }
-
     .servicio-body {
       position: relative;
       z-index: 1;
       display: flex;
       gap: rem(20);
-      max-width: 60%;
+      max-width: 50%;
 
       .text-content {
         padding-right: rem(40);
@@ -183,7 +173,6 @@
         margin-top: rem(8);
         width: fit-content;
         align-self: flex-end;
-        float: right;
         transition: gap 0.3s ease, color 0.3s ease;
 
         i {

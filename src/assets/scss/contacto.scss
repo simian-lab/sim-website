@@ -6,7 +6,6 @@
 #contacto {
   background-color: $bg-cream;
   padding: rem(80) 0;
-  height: 78vh;
 
   .container {
     align-items: flex-start;
@@ -97,6 +96,7 @@
         font-size: rem(16);
         color: #1B1918;
         transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        box-sizing: border-box;
 
         &:focus {
           outline: none;
@@ -181,10 +181,16 @@
     .contacto-info {
       h1 {
         max-width: 100%;
+        font-size: rem(32);
       }
 
       p {
         max-width: 100%;
+        font-size: rem(16);
+      }
+
+      .contacto-link {
+        font-size: rem(18);
       }
     }
 

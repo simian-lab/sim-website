@@ -101,16 +101,43 @@
         }
       }
     }
-  }
-}
 
-// Responsive básico
-@media (max-width: 768px) {
-  #main-footer .footer-content, 
-  #main-footer .footer-bottom {
-    flex-direction: column;
-    align-items: flex-start;
+    @media (max-width: 992px) {
+      .container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .legal {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        text-align: center;
+
+        a:nth-child(2) {
+          &:after {
+            display: none;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 600px) {
+      column-gap: 20px;
+
+      .legal {
+        a:nth-child(2) {
+          &:after {
+            display: inline-block;
+          }
+        }
+      }
+    }
   }
-  
-  #main-footer .footer-links { gap: 2rem; }
+
+  @media (max-width: 600px) {
+    padding: rem(64) 0;
+  }
 }

@@ -81,6 +81,7 @@ header {
 
         @media (max-width: 600px) {
             display: flex;
+            width: rem(32);
         }
     }
 
@@ -166,7 +167,7 @@ header {
 
         @media (max-width: 600px) {
             position: fixed;
-            top: 75px;
+            top: 66px;
             right: 0;
             width: 100%;
             height: calc(100vh - 75px);
@@ -207,6 +208,17 @@ header {
                 margin-top: rem(24);
                 padding-top: rem(24);
                 border-top: 1px solid rgba(0, 0, 0, 0.08);
+            }
+        }
+    }
+
+    @media (max-width: 600px) {
+        padding: 13px 0;
+        .wrap-logo {
+            .logo {
+                img {
+                    height: 34px;
+                }
             }
         }
     }

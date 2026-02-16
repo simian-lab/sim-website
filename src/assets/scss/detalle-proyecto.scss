@@ -504,3 +504,88 @@ body {
 
   }
 }
+
+.salud-total, .app-externado {
+  #proyecto-hero {
+    background: linear-gradient(to bottom, #14A4E5, #41C4FF);
+
+    .hero-content {
+      img:first-child {
+        max-width: 100%;
+      }
+      > p, .meta {
+        color: #191919;
+      }
+    }
+  }
+
+  #logros {
+    p {
+      padding-right: rem(60);
+    }
+  }
+
+  #imagenes-proyecto {
+    padding-bottom: rem(12);
+
+    .wrap-img-main img:last-child {
+      position: relative;
+      right: 0;
+      bottom: 0;
+      width: auto;
+    }
+  }
+}
+
+.app-externado {
+  #proyecto-hero {
+    background: linear-gradient(to bottom, #00522C, #076C3D);
+    padding: rem(40) 0 rem(40);
+
+    .hero-content {
+      img:first-child {
+        max-width: 100%;
+      }
+      > p, .meta {
+        color: $white;
+      }
+    }
+
+    .wrap-device img {
+      width: 600px;
+      transform: scale(1) translate(0, rem(120));
+    }
+  }
+
+  #solucion .col-5 img{
+    width: auto;
+  }
+
+  #imagenes-proyecto {
+    .wrap-img-main {
+      text-align: center;
+      margin-top: rem(-140);
+
+      img:last-child {
+        width: 600px;
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    #proyecto-hero {
+      padding-top: rem(140);
+
+      .wrap-device img {
+        width: 300px;
+        transform: scale(1) translate(0, 69px);
+      }
+    }
+
+    #imagenes-proyecto {
+      .wrap-img-main img:last-child {
+        width: 450px;
+      }
+    }
+  }
+}

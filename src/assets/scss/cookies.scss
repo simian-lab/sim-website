@@ -1,13 +1,12 @@
 @use "_functions" as *;
 @use "_variables" as *;
 @use "_base";
-@use "sass:color";
 
 // Breakpoints (alineados con diseño)
 $bp-sm: 690px;
 $bp-lg: 1024px;
 
-#privacy-policy {
+#cookies {
   padding: rem(180) 0 rem(80);
 
   > .container {
@@ -18,7 +17,7 @@ $bp-lg: 1024px;
   }
 
   // ----- Bloque del título principal -----
-  .privacy-policy__header {
+  .cookies__header {
     margin-bottom: rem(48);
     text-align: center;
 
@@ -53,7 +52,7 @@ $bp-lg: 1024px;
   }
 
   // ----- Contenedor del contenido -----
-  .privacy-policy__content {
+  .cookies__content {
     max-width: none;
 
     > section {
@@ -87,7 +86,7 @@ $bp-lg: 1024px;
   }
 
   // ----- Bloque "Última actualización" -----
-  .privacy-policy__updated {
+  .cookies__updated {
     background: $bg-cream;
     border-left: 4px solid $primary-color;
     padding: rem(24);
@@ -102,55 +101,29 @@ $bp-lg: 1024px;
     }
   }
 
-  // ----- Sección 1: bloque gris con datos del responsable -----
-  .privacy-policy__info-block {
+  // ----- Sección "Tipos de cookies" (bloques grises) -----
+  .cookies__type-list {
+    display: flex;
+    flex-direction: column;
+    gap: rem(24);
+  }
+
+  .cookies__type-item {
     padding: rem(24);
     border-radius: 8px;
     background: $gray-50;
-
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      font-size: rem(18);
-      line-height: 28px;
-    }
-
-    li {
-      margin-bottom: rem(8);
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-
-    a {
-      color: $primary-color;
-      text-decoration: none;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-
-  // ----- Sección 2: bloques con borde (finalidades) -----
-  .privacy-policy__finality-list {
-    display: flex;
-    flex-direction: column;
-    gap: rem(16);
-  }
-
-  .privacy-policy__finality-item {
-    padding: rem(16);
-    border: 1px solid $gray-200;
-    border-radius: 8px;
 
     h3 {
       font-family: $ff-primary, sans-serif;
       font-weight: 600;
       color: $primary-color;
-      font-size: rem(18);
+      font-size: rem(20);
+      margin: 0 0 rem(12) 0;
+    }
+
+    > p {
+      font-size: rem(16);
+      line-height: 24px;
       margin: 0 0 rem(8) 0;
     }
 
@@ -172,46 +145,8 @@ $bp-lg: 1024px;
     }
   }
 
-  // ----- Sección 3: bloques grises (tipos de datos) -----
-  .privacy-policy__data-list {
-    display: flex;
-    flex-direction: column;
-    gap: rem(24);
-  }
-
-  .privacy-policy__data-item {
-    padding: rem(24);
-    border-radius: 8px;
-    background: $gray-50;
-
-    h3 {
-      font-family: $ff-primary, sans-serif;
-      font-weight: 600;
-      color: $primary-color;
-      font-size: rem(20);
-      margin: 0 0 rem(12) 0;
-    }
-
-    ul {
-      list-style: disc;
-      list-style-position: inside;
-      padding: 0;
-      margin: 0;
-      font-size: rem(16);
-      line-height: 24px;
-    }
-
-    li {
-      margin-bottom: rem(4);
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-  }
-
-  // ----- Listas con viñetas disco (secciones 4, 7, 8, 10) -----
-  .privacy-policy__bullet-list {
+  // ----- Listas con viñetas disco (Cookies de terceros, Duración) -----
+  .cookies__bullet-list {
     list-style: disc;
     list-style-position: inside;
     padding: 0;
@@ -228,102 +163,64 @@ $bp-lg: 1024px;
     }
   }
 
-  // ----- Sección 5: conservación (punto verde + texto) -----
-  .privacy-policy__conservation-list {
+  // ----- Sección "Cómo gestionar" (bloques grises, h3 en gris) -----
+  .cookies__manage-list {
     display: flex;
     flex-direction: column;
-    gap: rem(12);
-  }
-
-  .privacy-policy__conservation-item {
-    display: flex;
-    align-items: flex-start;
-    gap: rem(12);
-
-    &::before {
-      content: "";
-      width: 8px;
-      height: 8px;
-      background: $primary-color;
-      border-radius: 50%;
-      flex-shrink: 0;
-      margin-top: 12px;
-    }
-
-    p {
-      margin: 0;
-      font-size: rem(16);
-      line-height: 24px;
-    }
-  }
-
-  // ----- Sección 6: grid de derechos (tarjetas de colores) -----
-  .privacy-policy__rights-grid {
-    display: grid;
-    grid-template-columns: 1fr;
     gap: rem(16);
-
-    @media (min-width: $bp-sm) {
-      grid-template-columns: repeat(2, 1fr);
-    }
   }
 
-  .privacy-policy__right-card {
+  .cookies__manage-item {
     padding: rem(16);
     border-radius: 8px;
-    border: 1px solid;
+    background: $gray-50;
 
     h3 {
       font-family: $ff-primary, sans-serif;
       font-weight: 600;
-      color: $primary-color;
-      font-size: rem(16);
+      color: $text-dark;
+      font-size: rem(18);
       margin: 0 0 rem(8) 0;
     }
 
     p {
-      font-size: rem(14);
-      line-height: 20px;
+      font-size: rem(16);
+      line-height: 24px;
       margin: 0;
     }
 
-    &--acceso {
-      border-color: $blue-200;
-      background: $blue-50;
+    ul {
+      list-style: disc;
+      list-style-position: inside;
+      padding: 0;
+      margin: 0;
+      font-size: rem(16);
+      line-height: 24px;
     }
 
-    &--rectificacion {
-      border-color: $green-200;
-      background: $green-50;
+    li {
+      margin-bottom: rem(4);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
 
-    &--supresion {
-      border-color: $yellow-200;
-      background: $yellow-50;
-    }
+    a {
+      color: $primary-color;
+      text-decoration: none;
 
-    &--portabilidad {
-      border-color: $purple-200;
-      background: $purple-50;
-    }
-
-    &--oposicion {
-      border-color: $red-200;
-      background: $red-50;
-    }
-
-    &--limitacion {
-      border-color: $gray-200;
-      background: $gray-50;
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 
-  // ----- Sección 9: caja crema de contacto -----
-  .privacy-policy__contact-box {
+  // ----- Caja crema de contacto -----
+  .cookies__contact-box {
     background: $bg-cream;
     padding: rem(24);
     border-radius: 8px;
-    margin-bottom: 0;
 
     ul {
       list-style: none;
@@ -349,30 +246,18 @@ $bp-lg: 1024px;
         text-decoration: underline;
       }
     }
-
-    & + p {
-      font-size: rem(16);
-      line-height: 24px;
-      margin-top: rem(16);
-      margin-bottom: 0;
-    }
   }
 
-  // ----- Nota final (caja verde) -----
-  .privacy-policy__note {
+  // ----- Nota final "Importante" (fondo amarillo claro) -----
+  .cookies__note {
     padding: rem(24);
-    border: 1px solid $green-200;
     border-radius: 8px;
-    background: $green-50;
+    background: $yellow-50;
 
     p {
       font-size: rem(16);
       line-height: 24px;
-      margin: 0 0 rem(8) 0;
-
-      &:last-child {
-        margin-bottom: 0;
-      }
+      margin: 0;
     }
   }
 

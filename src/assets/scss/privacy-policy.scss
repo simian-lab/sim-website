@@ -1,0 +1,391 @@
+@use "_functions" as *;
+@use "_variables" as *;
+@use "_base";
+@use "sass:color";
+
+// Breakpoints (alineados con diseño)
+$bp-sm: 640px;
+$bp-lg: 1024px;
+
+#privacy-policy {
+  padding: rem(180) 0 rem(80);
+
+  > .container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0 rem(226);
+  }
+
+  // ----- Bloque del título principal -----
+  .privacy-policy__header {
+    margin-bottom: rem(48);
+    text-align: center;
+
+    h1 {
+      font-family: $ff-secondary, serif;
+      font-weight: 500;
+      color: $primary-color;
+      font-size: rem(36);
+      line-height: 1.1;
+      margin: 0 0 rem(16) 0;
+
+      @media (min-width: $bp-sm) {
+        font-size: rem(40);
+      }
+
+      @media (min-width: $bp-lg) {
+        font-size: rem(48);
+      }
+    }
+
+    p {
+      font-family: $ff-primary, sans-serif;
+      color: $text-dark;
+      font-size: rem(18);
+      line-height: 28px;
+      margin: 0;
+
+      @media (min-width: $bp-sm) {
+        font-size: rem(20);
+      }
+    }
+  }
+
+  // ----- Contenedor del contenido -----
+  .privacy-policy__content {
+    max-width: none;
+
+    > section {
+      margin-bottom: rem(32);
+    }
+
+    h2 {
+      font-family: $ff-secondary, serif;
+      font-weight: 500;
+      color: $primary-color;
+      font-size: rem(28);
+      line-height: 1.2;
+      margin: 0 0 rem(16) 0;
+
+      @media (min-width: $bp-sm) {
+        font-size: rem(32);
+      }
+    }
+
+    section p,
+    section ul {
+      font-family: $ff-primary, sans-serif;
+      color: $text-dark;
+    }
+
+    section > p {
+      font-size: rem(18);
+      line-height: 28px;
+      margin: 0 0 rem(16) 0;
+    }
+  }
+
+  // ----- Bloque "Última actualización" -----
+  .privacy-policy__updated {
+    background: $bg-cream;
+    border-left: 4px solid $primary-color;
+    padding: rem(24);
+    margin-bottom: rem(32);
+    border-radius: 0 8px 8px 0;
+
+    p {
+      font-family: $ff-primary, sans-serif;
+      color: $text-dark;
+      font-size: rem(16);
+      margin: 0;
+    }
+  }
+
+  // ----- Sección 1: bloque gris con datos del responsable -----
+  .privacy-policy__info-block {
+    padding: rem(24);
+    border-radius: 8px;
+    background: $gray-50;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: rem(18);
+      line-height: 28px;
+    }
+
+    li {
+      margin-bottom: rem(8);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    a {
+      color: $primary-color;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  // ----- Sección 2: bloques con borde (finalidades) -----
+  .privacy-policy__finality-list {
+    display: flex;
+    flex-direction: column;
+    gap: rem(16);
+  }
+
+  .privacy-policy__finality-item {
+    padding: rem(16);
+    border: 1px solid $gray-200;
+    border-radius: 8px;
+
+    h3 {
+      font-family: $ff-primary, sans-serif;
+      font-weight: 600;
+      color: $primary-color;
+      font-size: rem(18);
+      margin: 0 0 rem(8) 0;
+    }
+
+    ul {
+      list-style: disc;
+      list-style-position: inside;
+      padding: 0;
+      margin: 0;
+      font-size: rem(16);
+      line-height: 24px;
+    }
+
+    li {
+      margin-bottom: rem(4);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // ----- Sección 3: bloques grises (tipos de datos) -----
+  .privacy-policy__data-list {
+    display: flex;
+    flex-direction: column;
+    gap: rem(24);
+  }
+
+  .privacy-policy__data-item {
+    padding: rem(24);
+    border-radius: 8px;
+    background: $gray-50;
+
+    h3 {
+      font-family: $ff-primary, sans-serif;
+      font-weight: 600;
+      color: $primary-color;
+      font-size: rem(20);
+      margin: 0 0 rem(12) 0;
+    }
+
+    ul {
+      list-style: disc;
+      list-style-position: inside;
+      padding: 0;
+      margin: 0;
+      font-size: rem(16);
+      line-height: 24px;
+    }
+
+    li {
+      margin-bottom: rem(4);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // ----- Listas con viñetas disco (secciones 4, 7, 8, 10) -----
+  .privacy-policy__bullet-list {
+    list-style: disc;
+    list-style-position: inside;
+    padding: 0;
+    margin: 0;
+    font-size: rem(18);
+    line-height: 28px;
+
+    li {
+      margin-bottom: rem(8);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // ----- Sección 5: conservación (punto verde + texto) -----
+  .privacy-policy__conservation-list {
+    display: flex;
+    flex-direction: column;
+    gap: rem(12);
+  }
+
+  .privacy-policy__conservation-item {
+    display: flex;
+    align-items: flex-start;
+    gap: rem(12);
+
+    &::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      background: $primary-color;
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 12px;
+    }
+
+    p {
+      margin: 0;
+      font-size: rem(16);
+      line-height: 24px;
+    }
+  }
+
+  // ----- Sección 6: grid de derechos (tarjetas de colores) -----
+  .privacy-policy__rights-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: rem(16);
+
+    @media (min-width: $bp-sm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .privacy-policy__right-card {
+    padding: rem(16);
+    border-radius: 8px;
+    border: 1px solid;
+
+    h3 {
+      font-family: $ff-primary, sans-serif;
+      font-weight: 600;
+      color: $primary-color;
+      font-size: rem(16);
+      margin: 0 0 rem(8) 0;
+    }
+
+    p {
+      font-size: rem(14);
+      line-height: 20px;
+      margin: 0;
+    }
+
+    &--acceso {
+      border-color: $blue-200;
+      background: $blue-50;
+    }
+
+    &--rectificacion {
+      border-color: $green-200;
+      background: $green-50;
+    }
+
+    &--supresion {
+      border-color: $yellow-200;
+      background: $yellow-50;
+    }
+
+    &--portabilidad {
+      border-color: $purple-200;
+      background: $purple-50;
+    }
+
+    &--oposicion {
+      border-color: $red-200;
+      background: $red-50;
+    }
+
+    &--limitacion {
+      border-color: $gray-200;
+      background: $gray-50;
+    }
+  }
+
+  // ----- Sección 9: caja crema de contacto -----
+  .privacy-policy__contact-box {
+    background: $bg-cream;
+    padding: rem(24);
+    border-radius: 8px;
+    margin-bottom: 0;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: rem(16);
+      line-height: 24px;
+    }
+
+    li {
+      margin-bottom: rem(8);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    a {
+      color: $primary-color;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    & + p {
+      font-size: rem(16);
+      line-height: 24px;
+      margin-top: rem(16);
+      margin-bottom: 0;
+    }
+  }
+
+  // ----- Nota final (caja verde) -----
+  .privacy-policy__note {
+    padding: rem(24);
+    border: 1px solid $green-200;
+    border-radius: 8px;
+    background: $green-50;
+
+    p {
+      font-size: rem(16);
+      line-height: 24px;
+      margin: 0 0 rem(8) 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    padding: rem(130) 0 rem(80);
+    > .container {
+      padding: 0 rem(25);
+    }
+  }
+
+  @media (max-width: 690px) {
+    > .container {
+      padding: 0 rem(16);
+    }
+  }
+}

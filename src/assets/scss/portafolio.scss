@@ -39,7 +39,7 @@
         }
     }
 
-    @media (max-width: 992px) {
+    @media (max-width: 1200px) {
         height: auto;
         min-height: auto;
         padding: rem(150) 0 rem(220);
@@ -104,7 +104,11 @@
                     border-radius: 15px;
                     display: block;
                     transform: scale(1.2) translate(-60px, -65px);
-                    transition: all 0.3s ease;
+                    transition: all 0.45s ease;
+
+                    &:hover {
+                        transform: scale(1.22) translate(-60px, -65px);
+                    }
                 }
             }
 
@@ -134,6 +138,11 @@
                     color: $primary-color;
                     line-height: 1.2;
                     margin-bottom: rem(12);
+                    transition: all 0.45s ease;
+
+                    &:hover {
+                        color: $green-bg;
+                    }
                 }
 
                 p {
@@ -182,7 +191,11 @@
                 }
             }
 
-            @media (max-width: 992px) {
+            @media (max-width: 1200px) {
+
+                border-radius: rem(16);
+                flex-wrap: wrap;
+                width: 100%;
 
                 .wrap-img,
                 .wrap-contenido {
@@ -190,12 +203,14 @@
                 }
 
                 .wrap-img {
-                    max-height: rem(216);
                     img {
-                        transform: scale(1.2) translate(-40px, -25px);
+                        transform: scale(1) translate(0, 0);
+
+                        &:hover {
+                            transform: scale(1) translate(0, 0);
+                        }
                     }
-                }
-                
+                }                
 
                 .wrap-contenido {
                     border-radius: 0 0 rem(22) rem(22);
@@ -215,9 +230,7 @@
             }
 
             @media (max-width: 600px) {
-                border-radius: rem(16);
-                flex-wrap: wrap;
-                width: 100%;
+                
 
                 .wrap-contenido {
                     padding: rem(24);
@@ -240,8 +253,8 @@
             }
         }
 
-        @media (max-width: 992px) {
-            gap: rem(100);
+        @media (max-width: 1200px) {
+            gap: rem(35);
         }
     }
 }
@@ -270,7 +283,7 @@
         grid-template-columns: repeat(3, 1fr);
         gap: rem(24);
 
-        @media (max-width: 992px) {
+        @media (max-width: 1200px) {
             grid-template-columns: repeat(2, 1fr);
         }
 

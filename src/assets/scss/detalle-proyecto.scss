@@ -145,7 +145,7 @@ body {
 
   @media (max-width: 600px) {
 
-    padding-top: rem(66);
+    padding-top: rem(120);
 
     .container {
       gap: rem(24);
@@ -575,10 +575,18 @@ body {
   @media (max-width: 1200px) {
     #proyecto-hero {
       padding-top: rem(140);
+      padding-bottom: rem(0);
 
-      .wrap-device img {
-        width: 300px;
-        transform: scale(1) translate(0, 69px);
+      .hero-content {
+        margin-bottom: rem(0);
+      }
+
+      .wrap-device  {
+        margin-top: rem(-80);
+        img {
+          width: 300px;
+          transform: scale(1) translate(0, 59px);
+        }
       }
     }
 
@@ -588,4 +596,8 @@ body {
       }
     }
   }
+
+  @media (max-width: 600px) {
+  }
+  
 }

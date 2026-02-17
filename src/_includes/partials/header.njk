@@ -1,0 +1,44 @@
+{# Definimos las rutas que usarán el logo principal (Home y Conócenos) #}
+{% set mainLogoPages = ["/", "/conocenos/", "/noticiero-90-minutos/", "/salud-total/", "/app-externado/"] %}
+<header>
+    <div class="container">    
+        <div class="wrap-logo">
+            <a href="/" class="logo">
+                {% if page.url in mainLogoPages %}
+                    {# Logo para Home y Conócenos #}
+                    <img src="/assets/img/logo.png" alt="Simian">
+                {% else %}
+                    {# Logo para el resto de páginas internas #}
+                    <img src="/assets/img/logo-interna.png" alt="Simian">
+                {% endif %}
+            </a>
+        </div>    
+        
+        <div class="nav-wrap">
+            <nav>
+                <a href="/portafolio/" 
+                   class="{% if page.url == '/portafolio/' %}current{% endif %}">Portafolio</a>
+                
+                <a href="/servicios/" 
+                   class="{% if page.url == '/servicios/' %}current{% endif %}">Servicios</a>
+                
+                <a href="/conocenos/" 
+                   class="{% if page.url == '/conocenos/' %}current{% endif %}">Conócenos</a>
+                
+                <a href="/contacto/" 
+                   class="{% if page.url == '/contacto/' %}current{% endif %}">Contacto</a>
+            </nav>
+            <!-- <div class="lang">
+                <a href="?lang=es" class="active">Español</a>
+                <span>•</span>
+                <a href="?lang=en">English</a>
+            </div> -->
+            
+        </div>
+        <button class="burger" aria-label="Menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</header>

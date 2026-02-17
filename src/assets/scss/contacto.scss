@@ -1,0 +1,247 @@
+@use "_functions" as *;
+@use "_variables" as *;
+@use "_base";
+@use "sass:color";
+
+#contacto {
+  background-color: $bg-cream;
+  padding: rem(80) 0;
+
+  .container {
+    align-items: flex-start;
+  }
+
+  .col-6 {
+    padding-top: 6rem;
+    box-sizing: border-box;
+  }
+
+  .contacto-info {
+    h1 {
+      color: $primary-color;
+      font-family: $ff-secondary;
+      font-size: rem(52);
+      font-weight: 400;
+      line-height: 1.1;
+      margin-bottom: rem(24);
+      max-width: rem(534);
+    }
+
+    p {
+      color: #1B1918;
+      font-family: $ff-primary;
+      font-size: rem(18);
+      line-height: 1.6;
+      margin-bottom: rem(32);
+      max-width: rem(477);
+    }
+
+    .contacto-links {
+      display: flex;
+      flex-direction: column;
+      gap: rem(16);
+    }
+
+    .contacto-link {
+      display: flex;
+      align-items: center;
+      gap: rem(12);
+      color: #1B1918;
+      font-family: $ff-primary;
+      font-size: rem(21);
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      i {
+        font-size: rem(24);
+        width: rem(24);
+        flex-shrink: 0;
+      }
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+
+  .contacto-form {
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: rem(12);
+      margin-bottom: rem(24);
+
+      label {
+        color: #1B1918;
+        font-family: $ff-primary;
+        font-size: rem(18);
+        font-weight: 600;
+        line-height: 1.6;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        max-width: rem(581);
+        padding: rem(0) rem(20);
+        background-color: $white;
+        border: 1px solid #9e9894;
+        border-radius: rem(5);
+        font-family: $ff-primary;
+        font-size: rem(16);
+        color: #1B1918;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        box-sizing: border-box;
+
+        &:focus {
+          outline: none;
+          border-color: $primary-color;
+          box-shadow: 0 0 0 2px rgba($primary-color, 0.1);
+        }
+
+        &::placeholder {
+          color: #9e9894;
+        }
+      }
+
+      input {
+        height: rem(60);
+      }
+
+      textarea {
+        padding-top: rem(20);
+        min-height: rem(146);
+        resize: vertical;
+      }
+    }
+
+    .form-status {
+      color: $primary-color;
+      font-family: $ff-primary;
+      font-size: rem(16);
+      font-weight: 500;
+      min-height: rem(24);
+      margin-bottom: rem(24);
+    }
+
+    .form-disclaimer {
+      color: #6B6561;
+      font-family: $ff-primary;
+      font-size: rem(14);
+      line-height: 1.4;
+      margin-bottom: rem(24);
+      max-width: rem(581);
+
+      a {
+        color: $primary-color;
+        text-decoration: none;
+        transition: text-decoration 0.3s ease;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .btn-submit {
+      background-color: $primary-color;
+      color: $white;
+      font-family: $ff-primary;
+      font-size: rem(18);
+      font-weight: 600;
+      padding: rem(12) rem(24);
+      border: none;
+      border-radius: rem(5);
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      width: fit-content;
+
+      &:hover {
+        background-color: color.adjust($primary-color, $lightness: -5%);
+      }
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 0 2px rgba($primary-color, 0.3);
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    .container {
+      grid-template-columns: 1fr;
+      gap: rem(60);
+    }
+
+    .contacto-info {
+      h1 {
+        max-width: 100%;
+        font-size: rem(32);
+      }
+
+      p {
+        max-width: 100%;
+        font-size: rem(16);
+      }
+
+      .contacto-link {
+        font-size: rem(18);
+      }
+    }
+
+    .contacto-form {
+      .form-group {
+        input,
+        textarea {
+          max-width: 100%;
+        }
+      }
+
+      .form-disclaimer {
+        max-width: 100%;
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    padding: rem(60) 0;
+
+    .container {
+      gap: rem(40);
+      flex-wrap: wrap;
+
+      .col-6 {
+        padding-top: rem(50);
+        width: 100%;
+
+      }
+    }
+
+    .contacto-info {
+      h1 {
+        font-size: rem(32);
+      }
+
+      p {
+        font-size: rem(16);
+      }
+
+      .contacto-link {
+        font-size: rem(18);
+
+        i {
+          font-size: rem(20);
+        }
+      }
+    }
+
+    .contacto-form {
+      padding-top: 0 !important;
+    }
+  }
+}

@@ -79,7 +79,7 @@ header {
             }
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 992px) {
             display: flex;
             width: rem(32);
         }
@@ -100,7 +100,7 @@ header {
             a {
                 color: $primary-color;
                 text-decoration: none;
-                font-size: rem(24);
+                font-size: rem(19);
                 font-weight: 600;
                 padding: 4px 13px;
                 transition: all 0.3s ease;
@@ -127,10 +127,6 @@ header {
                 }
 
                 @media (max-width: 992px) {
-                    font-size: rem(18);
-                }
-
-                @media (max-width: 600px) {
                     font-size: rem(18);
                     color: $cafe-oscuro !important;
                     border: none !important;
@@ -165,7 +161,7 @@ header {
             }
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 992px) {
             position: fixed;
             top: 66px;
             right: 0;

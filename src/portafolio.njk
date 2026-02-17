@@ -73,17 +73,20 @@ otrosProyectos:
             {% for proyecto in proyectos %}
                 <div class="item-destacado">
                     <div class="col-7 wrap-img">
+                      <a href="{{ proyecto.url }}">
                         <img src="{{ proyecto.imagen }}" alt="Portafolio Destacado 1">
+                      </a>
                     </div>
                     <div class="col-5 wrap-contenido">
                         <h4>{{ proyecto.titulo }}</h4>
-                        <h2>{{ proyecto.descripcion }}</h2>
+                        <a href="{{ proyecto.url }}">
+                          <h2>{{ proyecto.descripcion }}</h2>
+                        </a>
                         <p>{{ proyecto.texto }}</p>
                         <a href="{{ proyecto.url }}" class="btn-ver-proyecto">Conocer más <i class="icofont-thin-right"></i></a>
                     </div>
                 </div>
             {% endfor %}
-
         </div>
     </div>
 </section>

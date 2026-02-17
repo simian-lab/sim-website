@@ -115,6 +115,10 @@
                 padding: rem(32);
                 box-sizing: border-box;
 
+                a {
+                    text-decoration: none;
+                }
+
                 h4 {
                     font-size: rem(15);
                     font-weight: 600;
@@ -144,11 +148,11 @@
                     align-items: center;
                     gap: rem(12);
                     color: #1B1918;
-                    font-size: rem(16);
+                    font-size: rem(19);
                     font-weight: 400;
                     float: right;
                     text-decoration: none;
-                    transition: opacity 0.2s ease;
+                    transition: all 0.45s ease;
 
                     &:hover {
                         opacity: 0.85;
@@ -202,6 +206,10 @@
 
                     h4 {
                         font-size: rem(14);
+                    }
+
+                    .btn-ver-proyecto {
+                        font-size: rem(17);
                     }
                 }
             }

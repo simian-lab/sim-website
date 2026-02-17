@@ -81,7 +81,7 @@
       gap: 20px;
     }
 
-    .logo img { height: 58px; }
+    .logo img { height: 32px; }
 
     .legal {
       font-size: rem(16);
@@ -96,7 +96,7 @@
 
         &:after { 
           content: '•'; 
-          margin: 0 20px;
+          margin: 0 12px;
           display: inline-block;
           color: $banana-suave;
         }

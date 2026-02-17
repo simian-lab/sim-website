@@ -5,14 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }}</title>
     <meta name="description" content="{{ description or 'Soluciones en WordPress, PWAs y automatizaciones con IA. UX/UI, Core Web Vitals y alta disponibilidad para marcas que necesitan escalar.' }}">
+    <meta name="keywords" content="desarrollo web, PWA, automatizaciones IA, UX/UI, apps móviles, infraestructura, DevOps, estrategia digital" />
+	<meta name="author" content="Simian" />
+
+    <!-- Open Graph -->
+	<meta property="og:title" content="{{ title }}" />
+	<meta property="og:description" content="Soluciones en WordPress, PWAs y automatizaciones con IA. UX/UI, Core Web Vitals y alta disponibilidad para marcas que necesitan escalar." />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="" />
+
     <link rel="preload" href="https://fonts.gstatic.com/s/sourcesanspro/v22/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7lujVj9w.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="/assets/fonts/icofont/icofont.min.css" media="print" onload="this.media='all'">
+    {% if page.url == "/" %}
+        <link rel="preload" as="image" href="/assets/img/home/ai.webp" fetchpriority="high">
+    {% endif %}
     <link rel="stylesheet" href="/assets/css/{{ css }}.css">
     <link rel="icon" type="image/png" href="/assets/img/favicon-simian.png">
     <script src="/assets/js/general.js"></script>
+
+    <!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-50YE9GPTJM"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag("js", new Date());
+
+		gtag("config", "G-50YE9GPTJM");
+	</script>
 </head>
 <body class="{{ bodyClass or 'home' }}">
     {% include "partials/header.njk" %}

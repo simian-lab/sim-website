@@ -3,12 +3,17 @@
 @use "_base";
 @use "sass:color";
 
+.detalle-servicio{
+  .hero-img .hero-img-bg {
+    object-position: top;
+  }
+}
+
 #servicio-hero {
   background-color: $bg-cream;
-  padding: rem(120) 0 rem(80);
+  padding: rem(240) 0 rem(96);
   position: relative;
   overflow: hidden;
-  min-height: rem(400);
 
   .hero-wrapper {
     display: flex;

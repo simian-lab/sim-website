@@ -3,10 +3,10 @@ import path from 'node:path';
 import fs from 'node:fs';
 
 export default async function(eleventyConfig) {
-    // Limpiar carpeta _site solo en build inicial (no en watch)
+    // Limpiar carpeta public solo en build inicial (no en watch)
     eleventyConfig.on('eleventy.before', async ({ runMode }) => {
         if (runMode === 'build') {
-            const outputDir = '_site';
+            const outputDir = 'public';
             if (fs.existsSync(outputDir)) {
                 fs.rmSync(outputDir, { recursive: true });
             }
@@ -50,13 +50,13 @@ export default async function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/assets/img");
 
     // Copiar fuentes (Solución a tu problema)
-    // Esto copiará src/assets/fonts/ a _site/assets/fonts/
+    // Esto copiará src/assets/fonts/ a public/assets/fonts/
     eleventyConfig.addPassthroughCopy("src/assets/fonts");    
 
     return {
         dir: {
             input: "src",
-            output: "_site",
+            output: "public",
             includes: "_includes"
         }
     };

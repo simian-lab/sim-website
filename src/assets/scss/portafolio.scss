@@ -5,11 +5,9 @@
 
 #portafolio-hero {
     background-color: #FCF5EE;
-    padding: 5rem 0;
+    padding: rem(160) 0 rem(289);
     position: relative;
     overflow: hidden;
-    height: 70vh;
-    min-height: rem(400);
 
     .container {
         display: flex;
@@ -40,8 +38,6 @@
     }
 
     @media (max-width: 1200px) {
-        height: auto;
-        min-height: auto;
         padding: rem(150) 0 rem(220);
 
         .servicios-content {
@@ -59,6 +55,9 @@
     }
 
     @media (max-width: 600px) {
+        padding-top: rem(66);
+        padding-bottom: rem(156);
+
         .servicios-content {
             padding-top: 0;
             text-align: center;

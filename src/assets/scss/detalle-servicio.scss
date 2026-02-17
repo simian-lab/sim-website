@@ -75,7 +75,7 @@
     }
   }
 
-  @media (max-width: 992px) {
+  @media (max-width: 1200px) {
     height: auto;
     min-height: auto;
     padding-bottom: rem(40);
@@ -102,6 +102,7 @@
   }
 
   @media (max-width: 600px) {
+    padding-top: rem(115);
     padding-bottom: rem(50);
 
     .servicio-content {
@@ -182,7 +183,7 @@
     }
   }
 
-  @media (max-width: 992px) {
+  @media (max-width: 1200px) {
     padding: rem(50) 0 rem(180);
 
     .hitos-wrapper {
@@ -290,7 +291,7 @@
     }
   }
 
-  @media (max-width: 992px) {
+  @media (max-width: 1200px) {
     .container {
       padding-bottom: rem(40);
       padding-top: rem(40);

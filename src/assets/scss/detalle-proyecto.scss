@@ -94,7 +94,7 @@ body {
     }
   }
 
-  @media (max-width: 992px) {
+  @media (max-width: 1200px) {
 
     .container {
       flex-direction: column;
@@ -145,7 +145,7 @@ body {
 
   @media (max-width: 600px) {
 
-    padding-top: rem(120);
+    padding-top: rem(66);
 
     .container {
       gap: rem(24);
@@ -252,7 +252,7 @@ body {
     }
   }
 
-  @media (max-width: 992px) {
+  @media (max-width: 1200px) {
 
     h2 {
       font-size: rem(28);
@@ -479,7 +479,7 @@ body {
     }
   }
 
-  @media (max-width: 992px) {
+  @media (max-width: 1200px) {
     .wrap-img-main {
       img:last-child {
         width: rem(260);
@@ -540,7 +540,7 @@ body {
 .app-externado {
   #proyecto-hero {
     background: linear-gradient(to bottom, #00522C, #076C3D);
-    padding: rem(40) 0 rem(40);
+    padding: 7rem 0 3.75rem;
 
     .hero-content {
       img:first-child {
@@ -552,8 +552,8 @@ body {
     }
 
     .wrap-device img {
-      width: 600px;
-      transform: scale(1) translate(0, rem(120));
+      max-width: 350px;
+      transform: scale(1.2) translateY(51px);
     }
   }
 
@@ -572,7 +572,7 @@ body {
     }
   }
 
-  @media (max-width: 992px) {
+  @media (max-width: 1200px) {
     #proyecto-hero {
       padding-top: rem(140);
 

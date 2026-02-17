@@ -5,11 +5,9 @@
 
 #servicios-hero {
     background-color: #FCF5EE;
-    padding: 5rem 0;
+    padding: rem(160) 0 rem(289);
     position: relative;
     overflow: hidden;
-    height: 70vh;
-    min-height: rem(400);
 
     .container {
         display: flex;
@@ -39,9 +37,7 @@
         }
     }
 
-    @media (max-width: 992px) {
-      height: auto;
-      min-height: auto;
+    @media (max-width: 1200px) {
       padding: rem(150) 0 rem(220);
 
       .servicios-content {
@@ -59,7 +55,8 @@
     }
 
     @media (max-width: 600px) {
-      padding-bottom: rem(180);
+      padding-top: rem(66);
+      padding-bottom: rem(156);
 
         .servicios-content {
             text-align: center;
@@ -174,7 +171,7 @@
     }
   }
 
-  @media (max-width: 992px) {
+  @media (max-width: 1200px) {
     padding: rem(60) 0;
     
 

@@ -1,0 +1,143 @@
+@use "functions" as *;
+@use "variables" as *;
+@use "organisms/header";
+@use "organisms/footer";
+
+
+
+img, iframe {
+    max-width: 100%;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    font-family: $ff-primary;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $ff-primary;
+    font-size: rem(16);
+    line-height: 1.4;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #1B1918;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.col-1 {
+    width: 8.3333333333%;
+    float: left;
+}
+
+.col-2 {
+    width: 16.6666666667%;
+    float: left;
+}
+
+.col-3 {
+    width: 25%;
+    float: left;
+}
+
+.col-4 {
+    width: 33.3333333333%;
+    float: left;
+}
+
+.col-5 {
+    width: 41.6666666667%;
+    float: left;
+}
+
+.col-6 {
+    width: 50%;
+    float: left;
+}
+
+.col-7 {
+    width: 58.3333333333%;
+    float: left;
+}
+
+.col-8 {
+    width: 66.6666666667%;
+    float: left;
+}
+
+.col-9 {
+    width: 75%;
+    float: left;
+}
+
+.col-10 {
+    width: 83.3333333333%;
+    float: left;
+}
+
+.col-11 {
+    width: 91.6666666667%;
+    float: left;
+}
+
+.col-12 {
+    width: 100%;
+    float: left;
+}
+
+[class^="col-"], [class*=" col-"] {
+    box-sizing: border-box;
+
+    @media (max-width: 600px) {
+        float: none;
+        width: 100%;
+    }
+}
+
+.hero-img {
+    position: relative;
+    overflow: hidden;
+
+    .hero-img-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 45%;
+        height: 100%;
+        aspect-ratio: 1;
+        object-fit: cover;
+        object-position: center;
+        z-index: 0;
+    }
+    
+    @media (max-width: 1200px) {
+        .hero-img-bg {
+            width: 38%;
+            height: 100%;
+        }
+    }
+    @media (max-width: 600px) {
+        .hero-img-bg {
+            width: 100%;
+            position: relative;
+            height: 325px;
+            margin-bottom: 20px;
+        }
+    }
+  }

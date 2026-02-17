@@ -1,0 +1,276 @@
+@use "_functions" as *;
+@use "_variables" as *;
+@use "_base";
+
+// Breakpoints (alineados con diseño)
+$bp-sm: 690px;
+$bp-lg: 1024px;
+
+#cookies {
+  padding: rem(180) 0 rem(80);
+
+  > .container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0 rem(226);
+  }
+
+  // ----- Bloque del título principal -----
+  .cookies__header {
+    margin-bottom: rem(48);
+    text-align: center;
+
+    h1 {
+      font-family: $ff-secondary, serif;
+      font-weight: 500;
+      color: $primary-color;
+      font-size: rem(36);
+      line-height: 1.1;
+      margin: 0 0 rem(16) 0;
+
+      @media (min-width: $bp-sm) {
+        font-size: rem(40);
+      }
+
+      @media (min-width: $bp-lg) {
+        font-size: rem(48);
+      }
+    }
+
+    p {
+      font-family: $ff-primary, sans-serif;
+      color: $text-dark;
+      font-size: rem(18);
+      line-height: 28px;
+      margin: 0;
+
+      @media (min-width: $bp-sm) {
+        font-size: rem(20);
+      }
+    }
+  }
+
+  // ----- Contenedor del contenido -----
+  .cookies__content {
+    max-width: none;
+
+    > section {
+      margin-bottom: rem(32);
+    }
+
+    h2 {
+      font-family: $ff-secondary, serif;
+      font-weight: 500;
+      color: $primary-color;
+      font-size: rem(28);
+      line-height: 1.2;
+      margin: 0 0 rem(16) 0;
+
+      @media (min-width: $bp-sm) {
+        font-size: rem(32);
+      }
+    }
+
+    section p,
+    section ul {
+      font-family: $ff-primary, sans-serif;
+      color: $text-dark;
+    }
+
+    section > p {
+      font-size: rem(18);
+      line-height: 28px;
+      margin: 0 0 rem(16) 0;
+    }
+  }
+
+  // ----- Bloque "Última actualización" -----
+  .cookies__updated {
+    background: $bg-cream;
+    border-left: 4px solid $primary-color;
+    padding: rem(24);
+    margin-bottom: rem(32);
+    border-radius: 0 8px 8px 0;
+
+    p {
+      font-family: $ff-primary, sans-serif;
+      color: $text-dark;
+      font-size: rem(16);
+      margin: 0;
+    }
+  }
+
+  // ----- Sección "Tipos de cookies" (bloques grises) -----
+  .cookies__type-list {
+    display: flex;
+    flex-direction: column;
+    gap: rem(24);
+  }
+
+  .cookies__type-item {
+    padding: rem(24);
+    border-radius: 8px;
+    background: $gray-50;
+
+    h3 {
+      font-family: $ff-primary, sans-serif;
+      font-weight: 600;
+      color: $primary-color;
+      font-size: rem(20);
+      margin: 0 0 rem(12) 0;
+    }
+
+    > p {
+      font-size: rem(16);
+      line-height: 24px;
+      margin: 0 0 rem(8) 0;
+    }
+
+    ul {
+      list-style: disc;
+      list-style-position: inside;
+      padding: 0;
+      margin: 0;
+      font-size: rem(16);
+      line-height: 24px;
+    }
+
+    li {
+      margin-bottom: rem(4);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // ----- Listas con viñetas disco (Cookies de terceros, Duración) -----
+  .cookies__bullet-list {
+    list-style: disc;
+    list-style-position: inside;
+    padding: 0;
+    margin: 0;
+    font-size: rem(18);
+    line-height: 28px;
+
+    li {
+      margin-bottom: rem(8);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // ----- Sección "Cómo gestionar" (bloques grises, h3 en gris) -----
+  .cookies__manage-list {
+    display: flex;
+    flex-direction: column;
+    gap: rem(16);
+  }
+
+  .cookies__manage-item {
+    padding: rem(16);
+    border-radius: 8px;
+    background: $gray-50;
+
+    h3 {
+      font-family: $ff-primary, sans-serif;
+      font-weight: 600;
+      color: $text-dark;
+      font-size: rem(18);
+      margin: 0 0 rem(8) 0;
+    }
+
+    p {
+      font-size: rem(16);
+      line-height: 24px;
+      margin: 0;
+    }
+
+    ul {
+      list-style: disc;
+      list-style-position: inside;
+      padding: 0;
+      margin: 0;
+      font-size: rem(16);
+      line-height: 24px;
+    }
+
+    li {
+      margin-bottom: rem(4);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    a {
+      color: $primary-color;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  // ----- Caja crema de contacto -----
+  .cookies__contact-box {
+    background: $bg-cream;
+    padding: rem(24);
+    border-radius: 8px;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: rem(16);
+      line-height: 24px;
+    }
+
+    li {
+      margin-bottom: rem(8);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    a {
+      color: $primary-color;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  // ----- Nota final "Importante" (fondo amarillo claro) -----
+  .cookies__note {
+    padding: rem(24);
+    border-radius: 8px;
+    background: $yellow-50;
+
+    p {
+      font-size: rem(16);
+      line-height: 24px;
+      margin: 0;
+    }
+  }
+
+  @media (max-width: 992px) {
+    padding: rem(130) 0 rem(80);
+    > .container {
+      padding: 0 rem(25);
+    }
+  }
+
+  @media (max-width: 690px) {
+    > .container {
+      padding: 0 rem(16);
+    }
+  }
+}

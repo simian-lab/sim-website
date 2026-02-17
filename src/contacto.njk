@@ -1,0 +1,83 @@
+---
+layout: layouts/base.njk
+css: contacto
+title: "Contacto | Simian: Desarrollo web, WordPress y automatizaciones con IA"
+description: "Pagina contacto"
+bodyClass: "contacto"
+---
+<section id="contacto">
+    <div class="container">
+       <div class="contacto-info col-6">
+          <h1>De la idea al producto: conversemos</h1>
+          <p>Automatizamos procesos y creamos experiencias que convierten: UX/UI, desarrollo, IA y DevOps con estándares enterprise.</p>
+          <div class="contacto-links">
+             <a href="https://wa.me/573115992255" target="_blank" rel="noopener noreferrer" class="contacto-link">
+            <i class="icofont-brand-whatsapp"></i>
+             <span>WhatsApp +57 311 599 2255</span>
+             </a>
+             <a href="mailto:info@simian.co" class="contacto-link">
+                <i class="icofont-envelope"></i>
+             <span>info@simian.co</span>
+             </a>
+          </div>
+       </div>
+       <div class="contacto-form col-6">
+          <form id="my-form" action="https://formspree.io/f/myzpqbol" method="POST">
+             <div class="form-group">
+                <label for="name">Nombre</label>
+                <input type="text" id="name" name="name" required>
+             </div>
+             <div class="form-group">
+                <label for="email">Correo</label>
+                <input type="email" id="email" name="email" required>
+             </div>
+             <div class="form-group">
+                <label for="message">¿En qué podemos ayudarte?</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+             </div>
+             <div id="my-form-status" class="form-status"></div>
+             <p class="form-disclaimer">
+                Al enviar aceptas nuestra
+                <a href="/privacy-policy/" target="_blank" rel="noopener noreferrer">Política de tratamiento de datos</a>.
+             </p>
+             <button type="submit" class="btn-submit">Enviar</button>
+          </form>
+       </div>
+    </div>
+ </section>
+
+ <!-- Place this script at the end of the body tag -->
+ <script>
+    var form = document.getElementById("my-form");
+
+    async function handleSubmit(event) {
+        event.preventDefault();
+        var status = document.getElementById("my-form-status");
+        var data = new FormData(event.target);
+        fetch(event.target.action, {
+            method: form.method,
+            body: data,
+            headers: {
+                Accept: "application/json",
+            },
+        })
+            .then((response) => {
+                if (response.ok) {
+                    status.innerHTML = "¡Gracias por contactarnos!";
+                    form.reset();
+                } else {
+                    response.json().then((data) => {
+                        if (Object.hasOwn(data, "errors")) {
+                            status.innerHTML = data["errors"].map((error) => error["message"]).join(", ");
+                        } else {
+                            status.innerHTML = "¡Vaya! Hubo un problema al enviar su formulario";
+                        }
+                    });
+                }
+            })
+            .catch((error) => {
+                status.innerHTML = "¡Vaya! Hubo un problema al enviar su formulario";
+            });
+    }
+    form.addEventListener("submit", handleSubmit);
+</script>

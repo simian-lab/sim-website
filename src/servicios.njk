@@ -1,0 +1,70 @@
+---
+layout: layouts/base.njk
+css: servicios
+title: "Servicios | Simian: Desarrollo web, WordPress y automatizaciones con IA"
+description: "Soluciones en WordPress, PWAs y automatizaciones con IA. UX/UI, Core Web Vitals y alta disponibilidad para marcas que necesitan escalar."
+bodyClass: "servicios"
+servicios:
+  - numero: 1
+    titulo: "Estrategia de producto / Consultoría"
+    descripcion: "Diagnóstico y estrategia de producto para crecer: prioridades claras, menos retrocesos y más valor en producción."
+    imagen: "/assets/img/servicios/servicio-1.png"
+    url: "/diseno-centrado-en-el-usuario"
+  - numero: 2
+    titulo: "Automatización con IA"
+    descripcion: "IA aplicada a tu operación: asistentes y automatizaciones que optimizan soporte, ventas y backoffice con resultados medibles."
+    imagen: "/assets/img/servicios/servicio-2.png"
+    url: "/diseno-centrado-en-el-usuario"
+  - numero: 3
+    titulo: "UX/UI centrado en el usuario"
+    descripcion: "Diseñamos experiencias centradas en usuarios: interfaces claras y accesibles que mejoran conversión, retención y satisfacción en cada interacción."
+    imagen: "/assets/img/servicios/servicio-3.png"
+    url: "/diseno-centrado-en-el-usuario"
+  - numero: 4
+    titulo: "Desarrollo web y móvil"
+    descripcion: "Del diseño al producto real: desarrollo con foco en velocidad, estabilidad y experiencia impecable. Productos para crecer con tu equipo y tus usuarios."
+    imagen: "/assets/img/servicios/servicio-4.png"
+    url: "/diseno-centrado-en-el-usuario"
+  - numero: 4
+    titulo: "Infraestructura, seguridad y DevOps"
+    descripcion: "Infraestructura y DevOps para operar con confianza: alta disponibilidad, seguridad y despliegues confiables para escalar sin interrupciones."
+    imagen: "/assets/img/servicios/servicio-5.png"
+    url: "/diseno-centrado-en-el-usuario"
+  - numero: 4
+    titulo: "Soporte y mejora continua"
+    descripcion: "Soporte continuo para que tu producto no se detenga: monitoreo, mejoras y evolución basada en métricas para mantener rendimiento y seguridad."
+    imagen: "/assets/img/servicios/servicio-6.png"
+    url: "/diseno-centrado-en-el-usuario"
+---
+<section class="hero-img" id="servicios-hero">
+  <img src="/assets/img/servicios/lateral-servicios-hero.jpg" alt="Hero Servicios" class="hero-img-bg" fetchpriority="high">
+  <div class="container">
+    <div class="col-7 servicios-content">
+      <h1>Desde la planeación hasta el mantenimiento</h1>
+      <p>Estrategia y consultoría, automatizaciones con IA, UX/UI, desarrollo web y móvil, infraestructura/DevOps y soporte continuo para lanzar, operar y escalar.</p>
+    </div>
+  </div>
+</section>
+
+<section id="servicios-cards">
+  <div class="container">
+    <div class="servicios-grid">
+      {% for servicio in servicios %}
+        <article class="servicio-card" style="background-image: url('{{ servicio.imagen }}');">          
+          <div class="servicio-body">
+            <div class="wrap-content">
+                <div class="text-content">
+                    <h3>{{ servicio.titulo }}</h3>
+                    <p>{{ servicio.descripcion }}</p>
+                </div>
+                <!-- <a href="{{ servicio.url }}" class="servicio-link">
+                    <span>Conocer más</span>
+                    <i class="icofont-thin-right"></i>
+                </a> -->
+            </div>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

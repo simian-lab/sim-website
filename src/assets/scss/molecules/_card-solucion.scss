@@ -81,4 +81,42 @@
     @media (max-width: 992px) {
       height: rem(330);
     }
+
+    @media (max-width: 600px) {
+
+      height: auto;
+      display: flex;
+      flex-direction: column;
+
+      > h3{
+        display: none;
+      }
+      img {
+        height: 20rem;
+      }
+
+      .back {
+        background-color: $primary-color;
+        position: relative;
+        opacity: 1;
+        height: auto;
+        padding-bottom: rem(22);
+
+        h3 {
+          height: auto;
+          line-height: 1.2;
+          margin-bottom: rem(10);
+        }
+
+        p {
+          line-height: 1.4;
+          margin-bottom: rem(17);
+        }
+
+        .btn{ 
+          margin: 0 auto;
+          border-color: $banana-suave;
+        }
+      }
+    }
 }

@@ -63,9 +63,6 @@ body {
     flex: 1;
     display: flex;
     align-items: center;
-    // La imagen de fondo de IA se colocaría aquí como background-image si se tiene el asset
-    background: url('ai-chip-bg.png') no-repeat center right; 
-    background-size: contain;
     z-index: 1;
 
     .text-box {

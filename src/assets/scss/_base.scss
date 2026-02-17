@@ -109,3 +109,27 @@ body {
         width: 100%;
     }
 }
+
+.hero-img {
+    position: relative;
+    overflow: hidden;
+  
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 38%;
+      height: 100%;
+      z-index: 0;
+      
+      // Aquí ocurre la magia:
+      background-image: var(--bg-image, url('fallback-default.jpg'));
+      background-size: cover;
+      background-position: center;
+      
+      // Opcional: un overlay para que el texto sea legible
+      background-color: rgba(0, 0, 0, 0.5); 
+      background-blend-mode: overlay;
+    }
+  }

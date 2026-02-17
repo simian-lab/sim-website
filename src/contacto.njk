@@ -63,7 +63,7 @@ bodyClass: "contacto"
         })
             .then((response) => {
                 if (response.ok) {
-                    status.innerHTML = "Gracias por contactarnos!";
+                    status.innerHTML = "¡Gracias por contactarnos!";
                     form.reset();
                 } else {
                     response.json().then((data) => {

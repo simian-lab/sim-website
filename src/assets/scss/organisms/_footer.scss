@@ -17,6 +17,7 @@
   .footer-content {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     flex-wrap: wrap;
     gap: 2rem;
     margin-bottom: 4rem;
@@ -76,6 +77,8 @@
     .container {
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
     }
 
     .logo img { height: 58px; }
@@ -105,7 +108,7 @@
         flex-wrap: wrap;
         justify-content: center;
         gap: 10px;
-      }
+      }      
 
       .legal {
         display: flex;
@@ -135,7 +138,15 @@
     }
   }
 
+  @media (max-width: 992px) {
+    .footer-content {
+      margin-bottom: rem(40);
+    }
+  }
+
   @media (max-width: 600px) {
     padding: rem(64) 0 rem(35);
+
+    
   }
 }

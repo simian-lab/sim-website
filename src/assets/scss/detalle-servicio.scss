@@ -8,10 +8,6 @@
   padding: rem(120) 0 rem(80);
   position: relative;
   overflow: hidden;
-  background-image: url("/assets/img/diseno-centrado-en-el-usuario/fondo-servicio.jpg");
-  background-size: 36% 100%;
-  background-repeat: no-repeat;
-  background-position: left center;
   min-height: rem(400);
 
   .hero-wrapper {
@@ -80,9 +76,9 @@
   }
 
   @media (max-width: 992px) {
-    background-size: 42% 100%;
     height: auto;
     min-height: auto;
+    padding-bottom: rem(40);
 
     .servicio-content {
       max-width: 100%;
@@ -106,7 +102,6 @@
   }
 
   @media (max-width: 600px) {
-    background-image: none;
     padding-bottom: rem(50);
 
     .servicio-content {

@@ -8,10 +8,6 @@
     padding: 5rem 0;
     position: relative;
     overflow: hidden;
-    background-image: url(/assets/img/portafolio/lateral-hero-portafolio.jpg);
-    background-size: 36% 100%;
-    background-repeat: no-repeat;
-    background-position: left center;
     height: 70vh;
     min-height: rem(400);
 
@@ -44,8 +40,6 @@
     }
 
     @media (max-width: 992px) {
-        background-size: 40% 100%;
-        background-position: left center;
         height: auto;
         min-height: auto;
         padding: rem(150) 0 rem(220);
@@ -65,9 +59,6 @@
     }
 
     @media (max-width: 600px) {
-        background-image: none;
-        padding-bottom: rem(180);
-
         .servicios-content {
             padding-top: 0;
             text-align: center;

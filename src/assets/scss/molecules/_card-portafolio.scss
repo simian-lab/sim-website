@@ -12,6 +12,11 @@
     max-width: 48%;
     text-align: left;
     transition: transform 0.3s ease;
+    text-decoration: none;
+
+    a {
+      text-decoration: none;
+    }
 
     &:hover {
       transform: translateY(-5px);

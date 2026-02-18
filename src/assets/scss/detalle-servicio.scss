@@ -17,7 +17,7 @@
 
 #servicio-hero {
   background-color: $bg-cream;
-  padding: rem(240) 0 rem(96);
+  padding: rem(180) 0 rem(96);
   position: relative;
   overflow: hidden;
 
@@ -44,7 +44,6 @@
     }
 
     .btn {
-      margin-top: rem(32);
       padding: rem(16) rem(32);
       background-color: $primary-color;
       color: $white;
@@ -52,7 +51,8 @@
       font-size: rem(18);
       font-weight: 600;
       text-decoration: none;
-      border-radius: rem(8);
+      border-radius: rem(5);
+      display: inline-block;
       transition: all 0.45s ease;
 
       &:hover {

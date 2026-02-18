@@ -104,7 +104,7 @@ body {
 [class^="col-"], [class*=" col-"] {
     box-sizing: border-box;
 
-    @media (max-width: 600px) {
+    @media (max-width: 680px) {
         float: none;
         width: 100%;
     }
@@ -132,7 +132,7 @@ body {
             height: 100%;
         }
     }
-    @media (max-width: 600px) {
+    @media (max-width: 680px) {
         .hero-img-bg {
             width: 100%;
             position: relative;

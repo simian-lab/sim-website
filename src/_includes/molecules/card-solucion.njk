@@ -5,7 +5,9 @@
         <h3>{{ solucion.titulo }}</h3>
         <div class="wrap-content">
             <p>{{ solucion.descripcion }}</p>
-            <!-- <a href="{{ solucion.url }}" class="btn">Conocer más</a> -->
+            {% if solucion.url %}
+                <a href="{{ solucion.url }}" class="btn">Conocer más</a>
+            {% endif %}
         </div>
     </div>
 </article>

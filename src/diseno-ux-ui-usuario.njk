@@ -1,0 +1,84 @@
+---
+layout: layouts/base.njk
+css: detalle-servicio
+title: "Diseño UX/UI centrado en el usuario | Simian: Automatización con IA para tu negocio"
+description: "Soluciones en WordPress, PWAs y automatizaciones con IA. UX/UI, Core Web Vitals y alta disponibilidad para marcas que necesitan escalar."
+bodyClass: "detalle-servicio"
+soluciones:
+  - imagen: "/assets/img/home/soluciones-4.jpg"
+    titulo: "Desarrollo web y móvil"
+    descripcion: "Del diseño al producto real: desarrollo con foco en velocidad, estabilidad y experiencia impecable. Productos para crecer con tu equipo y tus usuarios."
+    url: "/diseno-centrado-en-el-usuario/"
+  - imagen: "/assets/img/home/soluciones-2.jpg"
+    titulo: "Infraestructura y DevOps"
+    descripcion: "Infraestructura y DevOps para operar con confianza: alta disponibilidad, seguridad y despliegues confiables para escalar sin interrupciones."
+    url: "/diseno-centrado-en-el-usuario/"
+  - imagen: "/assets/img/home/soluciones-3.jpg"
+    titulo: "Soporte y mejora continua"
+    descripcion: "Soporte continuo para que tu producto no se detenga: monitoreo, mejoras y evolución basada en métricas para mantener rendimiento y seguridad."
+    url: "/diseno-centrado-en-el-usuario/"
+---
+<section id="servicio-hero" class="hero-img">
+  <img src="/assets/img/servicios/diseno-ux-ui-usuario/diseno-ux-ui-usuario-lateral.webp" alt="Fondo Servicio" class="hero-img-bg" fetchpriority="high">
+  <div class="container">
+    <div class="servicio-content">
+      <h1>Diseño UX/UI centrado en el usuario</h1>
+      <p><strong>Tu producto no solo necesita verse mejor: necesita convertir mejor</strong>. Cuando diseñamos sin usuarios, aparecen fricciones invisibles que frenan registros, compras o contactos. En Simian investigamos con usuarios reales para diseñar experiencias claras, confiables y orientadas a la acción.</p>
+      
+      <a target="_blank" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0R5jiKr-TINHy2XJ11qPxX5FzKMEsBqj8bu8OcYHjxWFrt5w1CIYEyf7xLPd_vf4YNvGMNIBDp" class="btn">Agenda una asesoría</a>
+    </div>
+  </div>
+</section>
+
+<section id="detalle-servicio">
+  <div class="container">
+    <div class="col-4">
+      <h2 class="detalle-servicio-headline">Entender a tus usuarios es la base para atraer más conversiones.</h2>
+    </div>
+    <div class="col-8">
+      <div class="detalle-servicio-block">
+        <h3>¿Qué problema resolvemos?</h3>
+        <p>Muchos productos pierden oportunidades por detalles: formularios largos, mensajes confusos, navegación que no guía y páginas que no generan confianza. Internamente, se prioriza por suposiciones o por tendencias. Sin investigación, se diseñan pantallas bonitas pero poco efectivas, y <strong>el negocio lo paga en leads fríos, abandono y baja adopción</strong>.</p>
+      </div>
+      <div class="detalle-servicio-block">
+        <h3>Nuestras soluciones</h3>
+        <p>Diseñamos con investigación y foco en los resultados medibles.</p>
+        <ul>
+          <li>
+            <strong>Entendemos al usuario:</strong> por medio de entrevistas, encuestas, análisis de comportamiento y puntos de fricción para descubrir necesidades reales.
+          </li>
+          <li>
+            <strong>Convertimos hallazgos en decisiones:</strong> definimos criterios de éxito y prioridades orientadas a acción y conversión.
+          </li>
+          <li>
+            <strong>Prototipamos y validamos temprano:</strong> pruebas con usuarios para ajustar antes de desarrollar y reducir retrocesos.
+          </li>
+          <li>
+            <strong>UI con intención:</strong> jerarquía visual, microcopy, <strong>accesibilidad</strong> y diseño responsive para guiar decisiones y generar confianza.
+          </li>
+          <li>
+            <strong>Listo para implementación:</strong> sistema de diseño, componentes y especificaciones claras para el equipo de desarrollo.
+          </li>
+        </ul>
+      </div>
+      <div class="detalle-servicio-block">
+        <h3>¿Por qué confiar en Simian?</h3>
+        <p><strong>Llevamos 13+ años diseñando y construyendo productos digitales para organizaciones exigentes</strong>, donde cada interacción impacta resultados. Combinamos investigación, diseño y criterio de negocio para que el UX no sea una etapa “bonita”, sino una plataforma de conversión.</p>
+
+        <a target="_blank" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0R5jiKr-TINHy2XJ11qPxX5FzKMEsBqj8bu8OcYHjxWFrt5w1CIYEyf7xLPd_vf4YNvGMNIBDp" class="detalle-servicio-cta">Agenda una asesoría · Cuéntanos tu reto</a>
+      </div>      
+    </div>
+  </div>
+</section>
+
+<section id="otros-servicios">
+  <div class="container">
+    <h2>Otros servicios</h2>
+    
+    <div class="otros-servicios-grid">
+      {% for solucion in soluciones %}
+        {% include "molecules/card-solucion.njk" %}
+      {% endfor %}
+    </div>
+  </div>  
+</section>

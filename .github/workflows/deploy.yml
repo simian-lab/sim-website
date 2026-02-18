@@ -1,23 +1,33 @@
-name: Deploy to Firebase Hosting
+name: Build and Deploy
+
 on:
   push:
     branches:
       - master
-permissions:
-  checks: write
-  contents: read
+
 jobs:
-  build_and_deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Use Node.js 24.13.1
+        uses: actions/setup-node@v4
         with:
-          node-version-file: '.nvmrc'
-      - run: npm ci && npm run build
-      - uses: FirebaseExtended/action-hosting-deploy@v0
+          node-version: "24.13.1"
+          cache: "npm"
+
+      - name: Install and Build
+        run: |
+          npm ci
+          npm run build
+
+      - name: Deploy to Firebase
+        uses: w9jds/firebase-action@v13.4.0
         with:
-          repoToken: ${{ secrets.GITHUB_TOKEN }}
-          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_SIMIAN_WEBSITE }}
-          projectId: simian-website
-          channelId: live
+          args: deploy
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+          PROJECT_ID: ${{ vars.FIREBASE_PROJECT }}

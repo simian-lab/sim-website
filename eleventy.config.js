@@ -49,6 +49,8 @@ export default async function(eleventyConfig) {
     // Copiar imágenes
     eleventyConfig.addPassthroughCopy("src/assets/img");
 
+    eleventyConfig.addPassthroughCopy({"src/assets/firmas": "images/firmas"});
+
     // Copiar fuentes (Solución a tu problema)
     // Esto copiará src/assets/fonts/ a public/assets/fonts/
     eleventyConfig.addPassthroughCopy("src/assets/fonts");    

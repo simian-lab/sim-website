@@ -1,0 +1,87 @@
+@use "_functions" as *;
+@use "_variables" as *;
+@use "_base";
+
+body {
+    margin: 0;
+
+    &.not-found {
+        header {
+            nav, .lang {
+                a {
+                    color: $white;
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                      color: $banana-suave;
+                    }
+                }
+            }
+
+            .lang {
+              span {
+                color: $banana-suave;
+              }
+            }
+        }
+    }
+}
+
+#main-not-found {
+    background-color: $primary-color;
+    padding: rem(89) 0;   
+
+    .container {
+        min-height: 35vw;
+        align-items: center;
+        text-align: center;
+    }
+
+    img {
+        max-width: rem(285);
+    }
+
+    h1 {
+        font-family: $ff-secondary;
+        font-size: rem(40);
+        font-weight: 700;
+        color: $white;
+        line-height: 1.2;
+    }
+
+    p {
+        font-family: $ff-secondary;
+        font-size: rem(23);
+        font-weight: 400;
+        color: $white;
+        margin-bottom: rem(48);
+    }
+
+    .wrap-buttons {
+
+        display: flex;
+        gap: rem(16);
+        justify-content: center;
+
+        .btn {
+
+            border-radius: rem(2);
+            border: 2px solid $white;
+            color: $white;
+            font-size: rem(20);
+            font-weight: 600;
+            padding: rem(13) rem(20);
+            text-decoration: none;
+            width: rem(220);
+            text-align: center;
+            transition: all 0.3s ease;
+
+            &:hover {
+                background-color: $banana-suave;
+                color: $cafe-oscuro;
+                border-color: $banana-suave;
+            }
+        }
+
+    }
+}

@@ -16,7 +16,7 @@ header {
         backdrop-filter: blur(5px);
     }
 
-    body:not(.home):not(.conocenos):not(.detalle-proyecto) & {
+    body:not(.home):not(.conocenos):not(.detalle-proyecto):not(.not-found) & {
         background-color: $bg-cream;
     }
 
@@ -73,7 +73,8 @@ header {
 
         body.home &,
         body.conocenos &,
-        body.detalle-proyecto & {
+        body.detalle-proyecto &,
+        body.not-found & {
             span {
                 background-color: $white;
             }
@@ -117,7 +118,7 @@ header {
                 }
 
                 // Cuando el body NO es .home
-                body:not(.home):not(.conocenos):not(.detalle-proyecto) & {
+                body:not(.home):not(.conocenos):not(.detalle-proyecto):not(.not-found) & {
                     color: $cafe-oscuro;
 
                     &.current {

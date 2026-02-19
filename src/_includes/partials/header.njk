@@ -1,10 +1,10 @@
 {# Definimos las rutas que usarán el logo principal (Home y Conócenos) #}
-{% set mainLogoPages = ["/", "/conocenos/", "/noticiero-90-minutos/", "/salud-total/", "/app-externado/"] %}
+{% set mainLogoPages = ["/", "/conocenos/", "/noticiero-90-minutos/", "/salud-total/", "/app-externado/", "/404/"] %}
 <header>
     <div class="container">    
         <div class="wrap-logo">
             <a href="/" class="logo">
-                {% if page.url in mainLogoPages %}
+                {% if page.url in mainLogoPages or (is404)%}
                     {# Logo para Home y Conócenos #}
                     <img src="/assets/img/logo.png" alt="Simian">
                 {% else %}

@@ -1,0 +1,91 @@
+---
+layout: layouts/base.njk
+css: detalle-servicio
+title: "Servicio de Soporte y mejora continua |  simian.co"
+description: "Soporte continuo para que tu producto no se detenga: monitoreo, mejoras y evolución basada en métricas para mantener rendimiento y seguridad."
+bodyClass: "detalle-servicio devops"
+soluciones:
+  - imagen: "/assets/img/home/soluciones-4.jpg"
+    titulo: "Infraestructura, seguridad y DevOps"
+    descripcion: "Del diseño al producto real: desarrollo con foco en velocidad, estabilidad y experiencia impecable. Productos para crecer con tu equipo y tus usuarios."
+    url: "/diseno-centrado-en-el-usuario/"
+  - imagen: "/assets/img/home/soluciones-2.jpg"
+    titulo: "Infraestructura y DevOps"
+    descripcion: "Infraestructura y DevOps para operar con confianza: alta disponibilidad, seguridad y despliegues confiables para escalar sin interrupciones."
+    url: "/diseno-centrado-en-el-usuario/"
+  - imagen: "/assets/img/home/soluciones-3.jpg"
+    titulo: "Soporte y mejora continua"
+    descripcion: "Soporte continuo para que tu producto no se detenga: monitoreo, mejoras y evolución basada en métricas para mantener rendimiento y seguridad."
+    url: "/diseno-centrado-en-el-usuario/"
+---
+<section id="servicio-hero" class="hero-img">
+  <img src="/assets/img/servicios/infraestructura-seguridad-devops/servicio-infraestructura-seguridad-devops.webp" alt="Fondo Servicio" class="hero-img-bg" fetchpriority="high">
+  <div class="container">
+    <div class="servicio-content">
+      <h1>Soporte y mejora continua</h1>
+      <p>Lanzar es solo el inicio. Cuando un producto se queda sin mantenimiento, aparecen errores, lentitud y decisiones a ciegas que frenan los resultados. En Simian te acompañamos con soporte y mejora continua para mantener estabilidad, optimizar rendimiento y evolucionar con base en datos y prioridades claras.</p>
+      
+      <a target="_blank" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0R5jiKr-TINHy2XJ11qPxX5FzKMEsBqj8bu8OcYHjxWFrt5w1CIYEyf7xLPd_vf4YNvGMNIBDp" class="btn">Agenda una asesoría</a>
+    </div>
+  </div>
+</section>
+
+<section id="detalle-servicio">
+  <div class="container">
+    <div class="col-4">
+      <h2 class="detalle-servicio-headline">Un producto digital no solo se mantiene: se mejora, se cuida y se hace crecer.</h2>
+    </div>
+    <div class="col-8">
+      <div class="detalle-servicio-block">
+        <h3>¿Qué problema resolvemos?</h3>
+        <p>Después del lanzamiento empiezan los retos reales: bugs intermitentes, formularios que dejan de funcionar, contenidos que se desactualizan y ajustes que se vuelven parecen no terminar.  Sin un ciclo de mejora, se acumula deuda, se pierde conversión y el equipo termina reaccionando tarde, en lugar de mejorar con intención.</p>
+      </div>
+      <div class="detalle-servicio-block">
+        <h3>Nuestras soluciones</h3>
+        <p>Aseguramos continuidad operativa y evolución constante con un modelo simple y ordenado.</p>
+        <ul>
+            <li>
+                <strong>Soporte proactivo y correctivo:</strong> 
+                resolución de incidentes, revisiones periódicas y mantenimiento preventivo.
+            </li>
+            <li>
+                <strong>Backlog vivo y priorizado:</strong> 
+                mejoras por impacto, urgencia y esfuerzo, con entregas frecuentes.
+            </li>
+            <li>
+                <strong>Optimización continua:</strong> 
+                performance, accesibilidad, SEO técnico y experiencia de navegación.
+            </li>
+            <li>
+                <strong>Medición y aprendizaje:</strong> 
+                análisis de comportamiento, embudos y puntos de fricción para proponer mejoras con evidencia.
+            </li>
+            <li>
+                <strong>Evolución segura:</strong> 
+                cambios con control, pruebas y despliegues sin sorpresas. Te ayudamos a sostener el valor del producto y mejorar resultados mes a mes.
+            </li>
+        </ul>
+        
+        <img src="/assets/img/servicios/desarrollo-web-movil/tecnologias-desarrollo-web-movil.webp" alt="Herramientas " class="detalle-servicio-img" fetchpriority="high">
+      </div>
+      <div class="detalle-servicio-block">
+        <h3>¿Por qué confiar en Simian?</h3>
+        <p>Porque sabemos que la operación diaria no puede depender de la improvisación. Trabajamos con procesos claros, tiempos de respuesta definidos y trazabilidad de cada ajuste. Nuestro enfoque combina estabilidad y evolución: cuidamos lo que ya funciona y mejoramos lo que puede rendir más. Te damos un equipo aliado que entiende el producto, propone mejoras y ejecuta con calidad para que tu producto digital no se detenga.</p>
+
+        <a target="_blank" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0R5jiKr-TINHy2XJ11qPxX5FzKMEsBqj8bu8OcYHjxWFrt5w1CIYEyf7xLPd_vf4YNvGMNIBDp" class="detalle-servicio-cta">Agenda una asesoría · Cuéntanos tu reto</a>
+      </div>      
+    </div>
+  </div>
+</section>
+
+<section id="otros-servicios">
+  <div class="container">
+    <h2>Otros servicios</h2>
+    
+    <div class="otros-servicios-grid">
+      {% for solucion in soluciones %}
+        {% include "molecules/card-solucion.njk" %}
+      {% endfor %}
+    </div>
+  </div>  
+</section>

@@ -1,0 +1,93 @@
+---
+layout: layouts/base.njk
+css: detalle-servicio
+title: "Servicio de Infraestructura, seguridad y DevOps |  simian.co"
+description: "Infraestructura y DevOps para operar con confianza: alta disponibilidad, seguridad y despliegues confiables para escalar sin interrupciones."
+bodyClass: "detalle-servicio devops"
+soluciones:
+  - imagen: "/assets/img/home/soluciones-4.jpg"
+    titulo: "Infraestructura, seguridad y DevOps"
+    descripcion: "Del diseño al producto real: desarrollo con foco en velocidad, estabilidad y experiencia impecable. Productos para crecer con tu equipo y tus usuarios."
+    url: "/diseno-centrado-en-el-usuario/"
+  - imagen: "/assets/img/home/soluciones-2.jpg"
+    titulo: "Infraestructura y DevOps"
+    descripcion: "Infraestructura y DevOps para operar con confianza: alta disponibilidad, seguridad y despliegues confiables para escalar sin interrupciones."
+    url: "/diseno-centrado-en-el-usuario/"
+  - imagen: "/assets/img/home/soluciones-3.jpg"
+    titulo: "Soporte y mejora continua"
+    descripcion: "Soporte continuo para que tu producto no se detenga: monitoreo, mejoras y evolución basada en métricas para mantener rendimiento y seguridad."
+    url: "/diseno-centrado-en-el-usuario/"
+---
+<section id="servicio-hero" class="hero-img">
+  <img src="/assets/img/servicios/infraestructura-seguridad-devops/servicio-infraestructura-seguridad-devops.webp" alt="Fondo Servicio" class="hero-img-bg" fetchpriority="high">
+  <div class="container">
+    <div class="servicio-content">
+      <h1>Infraestructura, seguridad y DevOps</h1>
+      <p>Cuando la infraestructura crece sin orden, aparecen caídas, brechas y despliegues riesgosos. En Simian aseguramos tu operación con arquitectura cloud, seguridad y DevOps para entregar rápido, sin comprometer estabilidad.</p>
+      
+      <a target="_blank" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0R5jiKr-TINHy2XJ11qPxX5FzKMEsBqj8bu8OcYHjxWFrt5w1CIYEyf7xLPd_vf4YNvGMNIBDp" class="btn">Agenda una asesoría</a>
+    </div>
+  </div>
+</section>
+
+<section id="detalle-servicio">
+  <div class="container">
+    <div class="col-4">
+      <h2 class="detalle-servicio-headline">Convierte tu cloud en eficiencia medible, no en gasto impredecible.</h2>
+    </div>
+    <div class="col-8">
+      <div class="detalle-servicio-block">
+        <h3>¿Qué problema resolvemos?</h3>
+        <p>¿Te ha pasado que un despliegue pequeño rompe producción? ¿Que el sitio se cae y nadie sabe qué pasó? ¿O que el acceso a sistemas vive en contraseñas compartidas y permisos sin control? Casi siempre se debe a lo mismo: infraestructura sin estándares, poca trazabilidad y seguridad que se aplica demasiado tarde. El riesgo crece, la operación se vuelve frágil y <strong>al final todo recae en sobrecostos de operación.</strong></p>
+      </div>
+      <div class="detalle-servicio-block">
+        <h3>Nuestras soluciones</h3>
+        <ul>
+            <li>
+                <strong>Arquitectura en cloud (AWS):</strong> 
+                entornos ordenados (dev/stage/prod), balanceo, escalado y alta disponibilidad según necesidad.
+            </li>
+            <li>
+                <strong>Seguridad por diseño:</strong> 
+                gestión de accesos (IAM/roles), mínimos privilegios, políticas, cifrado y protección perimetral.
+            </li>
+            <li>
+                <strong>Respaldo y continuidad:</strong> 
+                backups automatizados, recuperación ante incidentes y planes de restauración probados.
+            </li>
+            <li>
+                <strong>DevOps real:</strong> 
+                CI/CD, despliegues controlados, versionamiento, rollback y automatización de infraestructura.
+            </li>
+            <li>
+                <strong>Observabilidad:</strong> 
+                monitoreo, alertas y logs para detectar fallas antes de que impacten a los usuarios.
+            </li>
+        </ul>
+        
+        <p>
+            <strong>Resultado:</strong> menos incidentes, más control y entregas más rápidas y confiables.
+        </p>
+        <img src="/assets/img/servicios/desarrollo-web-movil/tecnologias-desarrollo-web-movil.webp" alt="Herramientas " class="detalle-servicio-img" fetchpriority="high">
+      </div>
+      <div class="detalle-servicio-block">
+        <h3>¿Por qué confiar en Simian?</h3>
+        <p>Porque optimizar costos no es recortar”: es diseñar bien y operar con criterio. Combinamos experiencia en infraestructura, seguridad y entrega continua para reducir gasto sin exponer el negocio. Trabajamos con evidencia (consumo real, métricas, alertas) y dejamos estándares claros para asegurar una solución estable.</p>
+
+        <a target="_blank" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0R5jiKr-TINHy2XJ11qPxX5FzKMEsBqj8bu8OcYHjxWFrt5w1CIYEyf7xLPd_vf4YNvGMNIBDp" class="detalle-servicio-cta">Agenda una asesoría · Cuéntanos tu reto</a>
+      </div>      
+    </div>
+  </div>
+</section>
+
+<section id="otros-servicios">
+  <div class="container">
+    <h2>Otros servicios</h2>
+    
+    <div class="otros-servicios-grid">
+      {% for solucion in soluciones %}
+        {% include "molecules/card-solucion.njk" %}
+      {% endfor %}
+    </div>
+  </div>  
+</section>

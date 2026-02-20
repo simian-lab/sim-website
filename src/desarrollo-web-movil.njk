@@ -1,0 +1,89 @@
+---
+layout: layouts/base.njk
+css: detalle-servicio
+title: "Servicio de Desarrollo web y móvil |  simian.co"
+description: "Del diseño al producto real: desarrollo con foco en velocidad, estabilidad y experiencia impecable. Productos para crecer con tu equipo y tus usuarios."
+bodyClass: "detalle-servicio"
+soluciones:
+  - imagen: "/assets/img/home/soluciones-4.jpg"
+    titulo: "Desarrollo web y móvil"
+    descripcion: "Del diseño al producto real: desarrollo con foco en velocidad, estabilidad y experiencia impecable. Productos para crecer con tu equipo y tus usuarios."
+    url: "/diseno-centrado-en-el-usuario/"
+  - imagen: "/assets/img/home/soluciones-2.jpg"
+    titulo: "Infraestructura y DevOps"
+    descripcion: "Infraestructura y DevOps para operar con confianza: alta disponibilidad, seguridad y despliegues confiables para escalar sin interrupciones."
+    url: "/diseno-centrado-en-el-usuario/"
+  - imagen: "/assets/img/home/soluciones-3.jpg"
+    titulo: "Soporte y mejora continua"
+    descripcion: "Soporte continuo para que tu producto no se detenga: monitoreo, mejoras y evolución basada en métricas para mantener rendimiento y seguridad."
+    url: "/diseno-centrado-en-el-usuario/"
+---
+<section id="servicio-hero" class="hero-img">
+  <img src="/assets/img/servicios/desarrollo-web-movil/servicio-desarrollo-web-movil.webp" alt="Fondo Servicio" class="hero-img-bg" fetchpriority="high">
+  <div class="container">
+    <div class="servicio-content">
+      <h1>Desarrollo web y móvil</h1>
+      <p>Tu canal digital no necesita solo “estar en línea”: necesita rendir bien todos los días. Cuando el sitio es lento, se cae o cuesta actualizar, el negocio pierde oportunidades. En Simian construimos plataformas web y móviles rápidas, estables y escalables, listas para crecer contigo.</p>
+      
+      <a target="_blank" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0R5jiKr-TINHy2XJ11qPxX5FzKMEsBqj8bu8OcYHjxWFrt5w1CIYEyf7xLPd_vf4YNvGMNIBDp" class="btn">Agenda una asesoría</a>
+    </div>
+  </div>
+</section>
+
+<section id="detalle-servicio">
+  <div class="container">
+    <div class="col-4">
+      <h2 class="detalle-servicio-headline">Un desarrollo sólido hoy es la base para evolucionar y crecer mañana.</h2>
+    </div>
+    <div class="col-8">
+      <div class="detalle-servicio-block">
+        <h3>¿Qué problema resolvemos?</h3>
+        <p>El problema suele verse igual: <strong>páginas que cargan lento, formularios que fallan, integraciones frágiles y cambios que rompen cosas</strong>. A veces no es un pico de tráfico: es una base técnica que no fue pensada para operar y evolucionar. El resultado: usuarios que abandonan, equipos que dependen de terceros para todo y un producto digital que no acompaña el crecimiento.</p>
+      </div>
+      <div class="detalle-servicio-block">
+        <h3>Nuestras soluciones</h3>
+        <ul>
+            <li>
+                <strong>Arquitectura y desarrollo:</strong> 
+                sitios y apps web/móviles con componentes reutilizables, APIs sólidas e integraciones seguras.
+            </li>
+            <li>
+                <strong>Rendimiento real:</strong> 
+                optimización de carga, SEO, accesibilidad y buenas prácticas para una experiencia ágil y una plataforma orientada a la conversión.
+            </li>
+            <li>
+                <strong>Gestión de contenidos sin fricción:</strong> 
+                CMS y flujos editoriales para publicar con control y sin depender de desarrollo.
+            </li>
+            <li>
+                <strong>Intranets corporativas:</strong> 
+                portales internos para centralizar información y procesos, con roles, permisos y trazabilidad.
+            </li>
+            <li>
+                <strong>Calidad y entregas confiables:</strong> 
+                QA, pruebas, revisiones y despliegues controlados para reducir riesgos.
+            </li>
+        </ul>
+        <img src="/assets/img/servicios/desarrollo-web-movil/tecnologias-desarrollo-web-movil.webp" alt="Herramientas " class="detalle-servicio-img" fetchpriority="high">
+      </div>
+      <div class="detalle-servicio-block">
+        <h3>¿Por qué confiar en Simian?</h3>
+        <p><strong>Aplicamos estándares de calidad propios de entornos exigentes:</strong> rendimiento, estabilidad y mantenibilidad desde el inicio. Somos cuidadosos con la arquitectura, rigurosos con las pruebas y ordenados con la documentación para que el producto no dependa de una sola persona. Entregamos una plataforma confiable, fácil de operar y preparada para crecer sin sobresaltos.</p>
+
+        <a target="_blank" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0R5jiKr-TINHy2XJ11qPxX5FzKMEsBqj8bu8OcYHjxWFrt5w1CIYEyf7xLPd_vf4YNvGMNIBDp" class="detalle-servicio-cta">Agenda una asesoría · Cuéntanos tu reto</a>
+      </div>      
+    </div>
+  </div>
+</section>
+
+<section id="otros-servicios">
+  <div class="container">
+    <h2>Otros servicios</h2>
+    
+    <div class="otros-servicios-grid">
+      {% for solucion in soluciones %}
+        {% include "molecules/card-solucion.njk" %}
+      {% endfor %}
+    </div>
+  </div>  
+</section>

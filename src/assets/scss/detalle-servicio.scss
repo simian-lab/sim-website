@@ -297,10 +297,6 @@
     grid-template-columns: repeat(3, 1fr);
     gap: rem(40);
     width: 100%;
-    
-    .back {
-      display: none !important;
-    }
   }
 
   @media (max-width: 1200px) {
@@ -338,6 +334,19 @@
       grid-template-columns: 1fr;
       gap: rem(24);
       padding: rem(30) rem(20) rem(40);
+
+      .back {
+        background-color: $white;
+        border-radius: 0 0 12px 12px;
+
+        h3, p, .btn{
+          color: $primary-color;
+        }
+
+        .btn {
+          border-color: $primary-color;
+        }
+      }
     }
   }
 }

@@ -341,11 +341,29 @@ body {
   }
 
   .col-7 {
+    .btn-ver-test {
+      display: inline-block;
+      margin-top: rem(32);
+      padding: rem(14) rem(28);
+      background-color: $primary-color;
+      color: $white;
+      font-family: $ff-primary;
+      font-size: rem(18);
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: rem(5);
+      transition: background-color 0.2s ease;
+
+      &:hover {
+        background-color: darken($primary-color, 8%);
+      }
+    }
+
     img {
       margin-top: rem(40);
       width: rem(273);
     }
-  }  
+  }
 
   .col-5 {
     img {
@@ -390,7 +408,7 @@ body {
     
     p {
       font-size: rem(27);
-      font-weight: 400;
+      font-weight: 300;
       font-style: italic;
       line-height: 1.4;
       margin: 0 0 rem(16);
@@ -505,7 +523,8 @@ body {
   }
 }
 
-.salud-total, .app-externado {
+
+.salud-total, .app-externado, .elecciones-el-tiempo {
   #proyecto-hero {
     background: linear-gradient(to bottom, #14A4E5, #41C4FF);
 
@@ -537,7 +556,7 @@ body {
   }
 }
 
-.app-externado {
+.app-externado, .elecciones-el-tiempo {
   #proyecto-hero {
     background: linear-gradient(to bottom, #00522C, #076C3D);
     padding: 7rem 0 3.75rem;
@@ -600,4 +619,14 @@ body {
   @media (max-width: 600px) {
   }
   
+}
+.elecciones-el-tiempo {
+  #proyecto-hero {
+    background: linear-gradient(to bottom, #0862A0, #0F85D7);
+  }
+	#imagenes-proyecto {
+		.wrap-img-main img:last-child {
+			max-width: 500px;
+		}
+	}
 }

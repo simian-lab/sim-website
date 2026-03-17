@@ -313,6 +313,158 @@ body {
   }
 }
 
+#banner-wp-vip {
+  background-color: #131D25;
+  background-image: url('/assets/img/banner-wp-vip/bg-wp-vip-mobile.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 150px;
+    height: 150px;
+    background-image: url('/assets/img/banner-wp-vip/wp-watermark.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    opacity: 1 !important;
+    pointer-events: none;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: flex-start !important;
+    padding-top: rem(56);
+    padding-bottom: rem(56);
+    position: relative;
+    z-index: 1;
+  }
+
+  .col-logo {
+    margin-bottom: rem(10);
+		@media only screen and (min-width: 768px){
+			margin-bottom: rem(24);
+		}
+    img {
+      max-width: 159px;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .col-content {
+    h2 {
+      font-family: $ff-secondary;
+      margin-bottom: rem(15);
+    }
+
+    .titulo-regular {
+      display: block;
+      font-size: rem(30);
+      color: $white;
+      font-weight: 400;
+      line-height: 1.2;
+    }
+
+    .titulo-bold {
+      display: block;
+      font-size: rem(33);
+      color: $banana-suave;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .descripcion {
+      font-size: rem(16);
+      color: $white;
+      line-height: 1.5;
+      max-width: 490px;
+      margin-bottom: rem(32);
+    }
+
+    .btn-wp-vip {
+      display: inline-flex;
+      align-items: center;
+      gap: rem(8);
+      border: 1px solid $banana-suave;
+      color: $banana-suave;
+      padding: rem(11) rem(15);
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: rem(16);
+      font-weight: 600;
+      transition: background 0.3s;
+
+      &:hover {
+        background-color: rgba(244, 223, 151, 0.1);
+      }
+
+      svg {
+        width: 17px;
+        height: 17px;
+        flex-shrink: 0;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    background-image: url('/assets/img/banner-wp-vip/bg-wp-vip-desktop.jpg');
+
+    &::after {
+      width: 160px;
+      height: 160px;
+      opacity: 0.08;
+    }
+
+    .container {
+      flex-direction: row;
+      align-items: center;
+      padding-top: rem(60);
+      padding-bottom: rem(60);
+      gap: rem(60);
+    }
+
+    .col-logo {
+      flex-shrink: 0;
+      margin-bottom: 0;
+
+      img {
+        max-width: 200px;
+      }
+    }
+
+    .col-content {
+      .titulo-regular {
+        font-size: rem(30);
+      }
+
+      .titulo-bold {
+        font-size: rem(38);
+      }
+
+      .descripcion {
+        font-size: rem(19);
+        max-width: 500px;
+      }
+
+      .btn-wp-vip {
+        font-size: rem(18);
+        padding: rem(10) rem(16);
+
+        svg {
+          width: 21px;
+          height: 21px;
+        }
+      }
+    }
+  }
+}
+
 // Variables
 $bg-yellow: #f5e3a1;
 $card-white: #fdfaf2;

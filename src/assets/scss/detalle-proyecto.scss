@@ -7,24 +7,25 @@ body {
   margin: 0;
 
   &.detalle-proyecto {
-      header {
-          nav, .lang {
-              a {
-                  color: $white;
-                  transition: all 0.3s ease;
+    header {
+      nav,
+      .lang {
+        a {
+          color: $white;
+          transition: all 0.3s ease;
 
-                  &:hover {
-                    color: $banana-suave;
-                  }
-              }
+          &:hover {
+            color: $banana-suave;
           }
-
-          .lang {
-            span {
-              color: $banana-suave;
-            }
-          }
+        }
       }
+
+      .lang {
+        span {
+          color: $banana-suave;
+        }
+      }
+    }
   }
 }
 
@@ -95,7 +96,6 @@ body {
   }
 
   @media (max-width: 1200px) {
-
     .container {
       flex-direction: column;
       gap: rem(32);
@@ -144,7 +144,6 @@ body {
   }
 
   @media (max-width: 600px) {
-
     padding-top: rem(120);
 
     .container {
@@ -253,7 +252,6 @@ body {
   }
 
   @media (max-width: 1200px) {
-
     h2 {
       font-size: rem(28);
       margin-bottom: rem(20);
@@ -270,26 +268,25 @@ body {
   }
 
   @media (max-width: 600px) {
-
     padding: rem(60) 0;
-    
 
     .container {
       flex-direction: column;
       gap: rem(20);
     }
 
-    h2 {      
+    h2 {
       margin-bottom: rem(16);
     }
 
-    .col-7{
+    .col-7 {
       border-left: none;
       padding-left: 0;
       padding-top: rem(20);
     }
 
-    .col-5, .col-7 {
+    .col-5,
+    .col-7 {
       padding: 0;
     }
 
@@ -329,7 +326,7 @@ body {
   ul {
     list-style: disc;
     margin: 0;
-    color: #1B1918;
+    color: #1b1918;
     padding-left: rem(25);
     padding-right: rem(85);
 
@@ -369,7 +366,7 @@ body {
     img {
       width: rem(358);
     }
-  }  
+  }
 
   @media (max-width: 690px) {
     .container {
@@ -383,7 +380,7 @@ body {
     .col-5 {
       text-align: center;
 
-      img{
+      img {
         margin-top: rem(60);
         width: 80%;
       }
@@ -405,7 +402,6 @@ body {
   }
 
   .col-6:first-child {
-    
     p {
       font-size: rem(27);
       font-weight: 300;
@@ -432,7 +428,7 @@ body {
       flex-direction: column;
     }
 
-    h2 { 
+    h2 {
       font-size: rem(32);
     }
 
@@ -518,21 +514,21 @@ body {
         flex: 0 0 100%;
       }
     }
-
-
   }
 }
 
-
-.salud-total, .app-externado, .elecciones-el-tiempo {
+.salud-total,
+.app-externado,
+.elecciones-el-tiempo {
   #proyecto-hero {
-    background: linear-gradient(to bottom, #14A4E5, #41C4FF);
+    background: linear-gradient(to bottom, #14a4e5, #41c4ff);
 
     .hero-content {
       img:first-child {
         max-width: 100%;
       }
-      > p, .meta {
+      > p,
+      .meta {
         color: #191919;
       }
     }
@@ -556,16 +552,18 @@ body {
   }
 }
 
-.app-externado, .elecciones-el-tiempo {
+.app-externado,
+.elecciones-el-tiempo {
   #proyecto-hero {
-    background: linear-gradient(to bottom, #00522C, #076C3D);
+    background: linear-gradient(to bottom, #00522c, #076c3d);
     padding: 7rem 0 3.75rem;
 
     .hero-content {
       img:first-child {
         max-width: 100%;
       }
-      > p, .meta {
+      > p,
+      .meta {
         color: $white;
       }
     }
@@ -576,7 +574,7 @@ body {
     }
   }
 
-  #solucion .col-5 img{
+  #solucion .col-5 img {
     width: auto;
   }
 
@@ -600,7 +598,7 @@ body {
         margin-bottom: rem(0);
       }
 
-      .wrap-device  {
+      .wrap-device {
         margin-top: rem(-80);
         img {
           width: 300px;
@@ -618,16 +616,37 @@ body {
 
   @media (max-width: 600px) {
   }
-  
 }
 .elecciones-el-tiempo {
   #proyecto-hero {
-    background: linear-gradient(to bottom, #0862A0, #0F85D7);
+    background: linear-gradient(to bottom, #0862a0, #0f85d7);
   }
-	#imagenes-proyecto {
-		.wrap-img-main img:last-child {
-			max-width: 500px;
-			width: 100%;
-		}
-	}
+  #imagenes-proyecto {
+    .wrap-img-main img:last-child {
+      max-width: 500px;
+      width: 100%;
+    }
+  }
+}
+
+.agente-veyalthi {
+  #proyecto-hero {
+    background: #475f94;
+
+    background: linear-gradient(to bottom, #475f94, #2c3a5c);
+
+    .hero-content img:first-child {
+      display: block;
+      max-width: 15rem;
+      height: auto;
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  #imagenes-proyecto {
+    .wrap-img-main img:last-child {
+      max-width: 500px;
+      width: 100%;
+    }
+  }
 }

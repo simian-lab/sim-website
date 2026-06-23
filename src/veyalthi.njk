@@ -1,0 +1,96 @@
+---
+layout: layouts/base.njk
+css: detalle-proyecto
+title: "Caso de éxito: Agente Comercial de IA por WhatsApp para Veyalthi Group | simian.co"
+description: "Diseñamos y construimos un agente conversacional con IA que atiende, asesora y cotiza por WhatsApp 24/7 sobre el catálogo real de la empresa, sin inventar datos."
+ogImage: "/assets/img/proyectos/veyalthi/card-veyalthi.jpg"
+bodyClass: "detalle-proyecto agente-veyalthi"
+
+---
+
+<section id="proyecto-hero">
+  <div class="container">
+    <div class="col-6 hero-content">
+      <img src="/assets/img/proyectos/veyalthi/veyalthi-logo.png" alt="Veyalthi Group" width="400" height="600">
+      <h1>Agente Comercial de IA por WhatsApp</h1>
+      <p>
+        Construimos un asistente conversacional que atiende, asesora y cotiza <strong>24/7, con datos reales.</strong>
+      </p>
+      <div class="meta">
+        <p><strong>Cliente:</strong> Veyalthi Group</p>
+        <p><strong>Sector:</strong> Distribución de insumos médicos</p>
+      </div>
+    </div>
+    <div class="col-6 wrap-device">
+      <img src="/assets/img/proyectos/veyalthi/whatsapp.png" alt="Agente comercial de Veyalthi en WhatsApp" width="" height="">
+    </div>
+  </div>
+</section>
+
+<section id="proyecto-contexto">
+  <div class="container">
+    <div class="col-5">
+      <h2>El cliente</h2>
+      <p class="cliente-nombre">Veyalthi Group</p>
+      <p>
+        Veyalthi Group es una empresa colombiana dedicada a la <strong>comercialización y distribución de dispositivos médicos, medicamentos y artículos esenciales para el cuidado de la salud,</strong> con un catálogo de cientos de referencias. Su principal canal de contacto comercial con clientes y nuevos prospectos es <strong>WhatsApp.</strong>
+      </p>
+    </div>
+    <div class="col-7">
+      <h2>El reto</h2>
+      <p class="reto-intro">
+        Una demanda comercial creciente por WhatsApp, <strong>pero un equipo humano que no daba abasto</strong> para responder consultas repetitivas a toda hora.
+      </p>
+      <p>
+        Cada día llegaban decenas de consultas sobre precios, disponibilidad, fichas técnicas y cotizaciones, muchas fuera del horario de atención. Responderlas manualmente era lento, desviaba a los asesores de cerrar ventas y dejaba prospectos sin respuesta inmediata.
+      </p>
+      <p>
+        El desafío no era "poner un chatbot": en la venta de insumos médicos, <strong>un dato inventado es un riesgo real</strong>. Un precio equivocado, un producto que no existe o un registro sanitario mal citado erosionan la confianza y pueden tener implicaciones serias. Se necesitaba un agente con IA generativa que fuera, ante todo, <strong>confiable.</strong>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="solucion">
+  <div class="container">
+    <div class="col-7">
+      <h2>La solución</h2>
+      <ul>
+        <li>
+          Diseñamos y construimos un <strong>agente comercial autónomo</strong> sobre n8n que conversa de forma natural por WhatsApp —incluyendo notas de voz, que transcribe automáticamente—, entiende la intención del cliente y lo guía hacia una cotización o un siguiente paso concreto, manteniendo memoria de toda la conversación.
+        </li>
+        <li>
+          Implementamos <strong>búsqueda semántica (RAG) sobre el catálogo real</strong> con una base vectorial: el cliente encuentra el producto correcto por significado, no por palabra exacta. La pieza clave es una barrera anti-alucinación propia que distingue una coincidencia real de un simple "parecido", y sabe decir con honestidad cuándo un producto no existe.
+        </li>
+        <li>
+          Conectamos el agente a las <strong>fuentes de verdad del negocio</strong>: precios e IVA en tiempo real desde sus hojas de cálculo (con listas diferenciadas por tipo de cliente), fichas técnicas, imágenes y la <strong>generación automática de cotizaciones en PDF</strong> con la identidad de marca, almacenadas y entregadas como enlace.
+        </li>
+        <li>
+          Incorporamos <strong>escalamiento inteligente a un asesor humano</strong> —respetando el horario de atención y capturando los datos del lead— y un método de operación de grado producción: despliegues reversibles, pruebas automatizadas de la lógica y evaluaciones de comportamiento del agente.
+        </li>
+      </ul>
+      
+    </div>
+    <div class="col-5">
+      <img src="/assets/img/proyectos/veyalthi/solution.png" alt="Arquitectura del agente comercial de Veyalthi">
+    </div>
+  </div>
+</section>
+
+<section id="logros">
+  <div class="container">
+    <div class="col-6">
+      <h2>¿Qué logramos?</h2>
+      <p>Transformamos un canal de atención manual y saturado en un asistente comercial automático, confiable y disponible a toda hora.</p>
+    </div>
+    <div class="col-6">
+      <ul>
+        <li><strong>Atención comercial 24/7</strong>, respondiendo el primer contacto al instante y sin depender del horario del equipo humano.</li>
+        <li><strong>Cotizaciones formales en segundos</strong>, generadas en PDF con precios reales, IVA y condiciones comerciales, en lugar de minutos de trabajo manual.</li>
+        <li><strong>Respuestas confiables, sin datos inventados</strong>, gracias a una arquitectura donde la IA decide pero las fuentes de datos del negocio son las que responden.</li>
+        <li><strong>Liberación del equipo comercial</strong>, que deja de resolver consultas repetitivas para concentrarse en cerrar ventas y atender casos de mayor valor.</li>
+        <li><strong>Una base técnica escalable y mantenible</strong>, con despliegues reversibles y pruebas automatizadas, preparada para crecer en catálogo y volumen.</li>
+      </ul>
+    </div>
+  </div>
+</section>
